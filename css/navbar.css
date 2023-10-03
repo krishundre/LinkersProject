@@ -1,0 +1,66 @@
+.navbar {
+    width: 100%;
+    height: 4em;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* Styling for the logo */
+.logo {
+    background-color: black;
+    float: left;
+    padding: 10px;
+    width: 10em;
+    /* Add padding to the logo */
+}
+
+/* Styling for the navigation options */
+.navbar a {
+    float: left;
+    /* Float the navigation options to the left */
+    display: block;
+    /* Display them as block elements */
+    color: white;
+    /* Text color */
+    text-align: center;
+    /* Center-align text */
+    padding: 1em;
+    /* Add padding to the navigation options */
+    text-decoration: none;
+    /* Remove underlines from links */
+    position: relative;
+    /* Set position to relative for the underline */
+    transition: 0.3s;
+    /* Add a transition for smooth effect */
+    font-size: large;
+}
+
+/* Styling for the underline */
+.navbar a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    /* Height of the underline */
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    /* Color of the underline */
+    transition: 0.3s;
+    /* Add a transition for smooth effect */
+}
+
+/* Change color on hover for navigation options */
+.navbar a:hover::before {
+    width: 100%;
+    /* Expand the underline to 100% */
+}
+
+/* Remove the underline when not hovered */
+.navbar a:not(:hover)::before {
+    width: 0;
+    /* Shrink the underline back to 0 */
+}
