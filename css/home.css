@@ -3,10 +3,35 @@
     margin: 17px 20px 15px 17px;
 }
 
-#holder1 {
+.home_part_1 {
     width: 438px;
     height: 612.465px;
     flex-shrink: 0;
     background: rgba(255, 255, 255, 0.10);
     /* filter: blur(2px); */
+    
+}
+
+.home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.home_part_1 {
+    grid-area: 1 / 1 / 4 / 2;
+}
+
+.home_part_2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.home_part_3 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.home_part_4 {
+    grid-area: 3 / 2 / 4 / 3;
 }
