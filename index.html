@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e3cd0ae3b1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/services.css">
 
 </head>
 
@@ -23,6 +24,8 @@
             background: linear-gradient(180deg, #304352 0%, #D7D2CC 70.07%);
             /* width: 1440px; */
             height: 4617px;
+            /* display: flex; */
+            /* justify-content: center; */
         }
     </style>
     <div class="navbar">
@@ -34,12 +37,31 @@
         <a href="#contact"><i class="fa-solid fa-address-card fa-xs" style="color: #ffffff;"></i>&nbsp; Contact us</a>
     </div>
     <div class="home">
-        <div id="holder1">
-        </div>
+        <div class="title_sec">Home</div>
+        <div class="home_grid">
             <div class="home_part_1"> </div>
-            <div class="home_part_2">Welcome to the Linkers' Project, where we make messaging across WhatsApp, Instagram, Telegram, and email a breeze. Our user-friendly platform streamlines communication, reducing effort and eliminating errors. Say hello to efficient messaging with the Linkers' Project </div>
-            <div class="home_part_3"> </div>
-            <div class="home_part_4"> </div>
+            <div class="home_part_2">Welcome to the <span class="title"><a href="#">Linkers' Project</a></span>, where
+                we make messaging across WhatsApp, Instagram, Telegram, and email a breeze. Our user-friendly platform
+                streamlines communication, reducing effort and eliminating errors. Say hello to efficient messaging with
+                the Linkers' Project. </div>
+            <div class="home_part_3">
+                <span class="title">Services Provided: </span>
+                <li>Generate Pre-filled Links</li>
+                <li>Effortless Messaging</li>
+                <li>Error-Free Enhanced User Experience</li>
+            </div>
+            <div class="home_part_4">
+                <a href="#service">Generate Link <i class="fa-solid fa-link fa-2xs" style="color: #000000;"></i></a>
+            </div>
+        </div>
+    </div>
+    <hr style="width: 90%; text-align: center; margin-top: 50px; margin-bottom: 30px;">
+    <div class="services">
+        <div class="title_sec">Services</div>
+        <div class="service_container">
+            <title id="services_title"></title>
+            <div id="services_title">Select Application you want to generate Link for:</div>
+        </div>
     </div>
 </body>
 

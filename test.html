@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="slideshow.css">
+    <style>
+        /* Styles for the slideshow container */
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: wheat
+        }
+
+        /* Style for images in the slideshow */
+        .mySlides {
+            display: none;
+        }
+
+        /* Style for navigation buttons */
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, change button background color */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        img{
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+    let slideIndex = 0;
+showSlides();
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides() {
+  let i;
+  const slides = document.getElementsByClassName("mySlides");
+  const dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  setTimeout(showSlides, 7000); // Change image every 7 seconds
+}
+
+    </script>
+    Hellppp
+    <div class="slideshow-container">
+        hello
+        <div class="mySlides fade">
+            <img src="Images/_DSC1671.JPG" alt="Photo 1">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="Images/_DSC1662.JPG"
+                alt="">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="Images/_DSC1671.JPG" alt="Photo 3">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="Images/_DSC1834.JPG" alt="Photo 4">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="Images/_DSC1837.JPG" alt="Photo 5">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <script src="slideshow.js"></script>
+</body>
+
+</html>
