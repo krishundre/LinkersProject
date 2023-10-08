@@ -1,21 +1,79 @@
-
-.service_container{
+.service_container {
     border-radius: 77px;
-background: rgba(217, 217, 217, 0.50);
-width: 1328px;
-height: 1267px;
-flex-shrink: 0;
-margin: auto;
-display: flex;
-justify-content: center;
-
+    background: rgba(217, 217, 217, 0.50);
+    width: 1328px;
+    height: 1267px;
+    flex-shrink: 0;
+    margin: auto;
+    /* display: flex;
+    justify-content: center; */
+    margin-top: 10px;
 }
 
-#services_title{
+#services_title {
     color: #000;
-font-family: Roboto Condensed;
-font-size: 38px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    font-family: Roboto Condensed;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 20px;
+    /* height: 56px; */
+    text-align: center;
 }
+
+#apptray{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.fa-2xl {
+    font-size: 3em;
+    line-height: .03125em;
+    vertical-align: -0.1875em;
+}
+.apptray {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f9fa; /* Background color of the apptray */
+    padding: 20px;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    background-size: cover;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+  }
+  
+  /* Instagram icon */
+  .icon.instagram {
+    background-image: url('instagram-icon.png'); /* Replace 'instagram-icon.png' with the actual path to your Instagram icon */
+  }
+  
+  /* Facebook icon */
+  .icon.facebook {
+    background-image: url('facebook-icon.png'); /* Replace 'facebook-icon.png' with the actual path to your Facebook icon */
+  }
+  
+  /* Email icon */
+  .icon.email {
+    background-image: url('email-icon.png'); /* Replace 'email-icon.png' with the actual path to your email icon */
+  }
+  
+  /* LinkedIn icon */
+  .icon.linkedin {
+    background-image: url('linkedin-icon.png'); /* Replace 'linkedin-icon.png' with the actual path to your LinkedIn icon */
+  }
+  
+  /* WhatsApp icon */
+  .icon.whatsapp {
+    background-image: url('whatsapp-icon.png'); /* Replace 'whatsapp-icon.png' with the actual path to your WhatsApp icon */
+  }
+  
+  /* Change icon color on hover */
+  .icon:hover {
+    filter: brightness(1.5); /* Adjust brightness for color change */
+  }
+  
