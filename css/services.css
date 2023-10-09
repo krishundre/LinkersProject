@@ -1,79 +1,185 @@
 .service_container {
-    border-radius: 77px;
-    background: rgba(217, 217, 217, 0.50);
-    width: 1328px;
-    height: 1267px;
-    flex-shrink: 0;
-    margin: auto;
-    /* display: flex;
+  border-radius: 77px;
+  background: rgba(217, 217, 217, 0.50);
+  width: 1328px;
+  height: 1267px;
+  flex-shrink: 0;
+  margin: auto;
+  /* display: flex;
     justify-content: center; */
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 #services_title {
-    color: #000;
-    font-family: Roboto Condensed;
-    font-size: 38px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 20px;
-    /* height: 56px; */
-    text-align: center;
+  color: #000;
+  font-family: Roboto Condensed;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 20px;
+  /* height: 56px; */
+  text-align: center;
 }
 
-#apptray{
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-.fa-2xl {
-    font-size: 3em;
-    line-height: .03125em;
-    vertical-align: -0.1875em;
-}
 .apptray {
-    display: flex;
-    justify-content: center;
-    background-color: #f8f9fa; /* Background color of the apptray */
-    padding: 20px;
-  }
-  
-  .icon {
-    width: 40px;
-    height: 40px;
-    margin: 0 10px;
-    background-size: cover;
-    transition: color 0.3s ease; /* Smooth transition for color change */
-  }
-  
-  /* Instagram icon */
-  .icon.instagram {
-    background-image: url('instagram-icon.png'); /* Replace 'instagram-icon.png' with the actual path to your Instagram icon */
-  }
-  
-  /* Facebook icon */
-  .icon.facebook {
-    background-image: url('facebook-icon.png'); /* Replace 'facebook-icon.png' with the actual path to your Facebook icon */
-  }
-  
-  /* Email icon */
-  .icon.email {
-    background-image: url('email-icon.png'); /* Replace 'email-icon.png' with the actual path to your email icon */
-  }
-  
-  /* LinkedIn icon */
-  .icon.linkedin {
-    background-image: url('linkedin-icon.png'); /* Replace 'linkedin-icon.png' with the actual path to your LinkedIn icon */
-  }
-  
-  /* WhatsApp icon */
-  .icon.whatsapp {
-    background-image: url('whatsapp-icon.png'); /* Replace 'whatsapp-icon.png' with the actual path to your WhatsApp icon */
-  }
-  
-  /* Change icon color on hover */
-  .icon:hover {
-    filter: brightness(1.5); /* Adjust brightness for color change */
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  width: 818px;
+  margin: 10px auto 10px auto;
+}
+
+.fa-2xl {
+  font-size: 54px;
+  line-height: .03125em;
+  vertical-align: -0.1875em;
+}
+
+
+.icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  background-size: cover;
+  filter: brightness(50%);
+  transition: 1s 10ms
+}
+
+
+.icon:hover {
+  filter: brightness(100%);
+}
+
+.instagram{
+  color:#BC2A8D;
+}
+
+.facebook{
+  color: #4267B2;
+}
+
+.email{
+  color: #C71610;
+}
+
+.linkedin{
+  color: #0072b1;
+}
+
+.whatsapp{
+  color: #25D366;
+}
+
+.ig_content{
+  padding-top: 20px;
+  height: 500px;
+  width: 900px;
+  margin: auto;
+  margin-top: 45px;
+  text-align: center;
+  background-color: wheat;
+  border-radius: 10px;
+}
+
+.input {
+  border-radius: 10px;
+  outline: 3px solid #FEBF00;
+  border: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #e2e2e2;
+  outline-offset: 3px;
+  font-size: larger;
+  width: 75%;
+  padding: 10px 1rem;
+  transition: 0.25s;
+}
+
+.input:focus {
+  outline-offset: 10px;
+  background-color: #fff
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn2 {
+  width: 6.5em;
+  height: 2.3em;
+  margin: 0.5em;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 0.625em;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+ }
+ 
+ .btn2:hover {
+  color: black;
+ }
+ 
+ .btn2:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+ }
+ 
+ .btn2:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+ }
+
+.Btn {
+  width: 100px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  padding: 0%;
+}
+
+.text {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgb(2, 153, 153);
+}
+
+.svgIcon {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: teal;
+}
+
+.Btn:hover .text {
+  background-color: rgb(0, 133, 133);
+}
+
+.Btn:hover .svgIcon {
+  background-color: rgb(0, 105, 105);
+}
