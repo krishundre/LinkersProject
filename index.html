@@ -2,18 +2,27 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linkers' Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Noto+Serif+Balinese&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Inspiration&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/e3cd0ae3b1.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/services.css" />
+    <link rel="stylesheet" href="css/contact.css">
 
 </head>
 
@@ -21,7 +30,7 @@
     <style>
         body {
             margin: 0px;
-            background: linear-gradient(180deg, #304352 0%, #D7D2CC 70.07%);
+            background: linear-gradient(180deg, #304352 0%, #d7d2cc 70.07%);
             /* width: 1440px; */
             height: 4617px;
             /* display: flex; */
@@ -30,20 +39,25 @@
     </style>
     <div class="navbar">
         <div class="logo"><a href="#home">Logo</a></div>
-        <a href="#home"><i class="fa-solid fa-house-user fa-xs" style="color: #ffffff;"></i>&nbsp; Home</a>
-        <a href="#services"><i class="fa-solid fa-link fa-xs" style="color: #ffffff;"></i>&nbsp; Services</a>
-        <a href="#aboutus"><i class="fa-solid fa-circle-info fa-xs" style="color: #ffffff;"></i>&nbsp; About Us</a>
-        <a href="#help"><i class="fa-solid fa-handshake-angle fa-xs" style="color: #ffffff;"></i>&nbsp; Help</a>
-        <a href="#contact"><i class="fa-solid fa-address-card fa-xs" style="color: #ffffff;"></i>&nbsp; Contact us</a>
+        <a href="#home"><i class="fa-solid fa-house-user fa-xs" style="color: #ffffff"></i>&nbsp; Home</a>
+        <a href="#services"><i class="fa-solid fa-link fa-xs" style="color: #ffffff"></i>&nbsp;
+            Services</a>
+        <a href="#aboutus"><i class="fa-solid fa-circle-info fa-xs" style="color: #ffffff"></i>&nbsp; About Us</a>
+        <a href="#help"><i class="fa-solid fa-handshake-angle fa-xs" style="color: #ffffff"></i>&nbsp; Help</a>
+        <a href="#contact"><i class="fa-solid fa-address-card fa-xs" style="color: #ffffff"></i>&nbsp; Contact us</a>
     </div>
     <div class="home">
         <div class="title_sec">Home</div>
         <div class="home_grid">
-            <div class="home_part_1"> </div>
-            <div class="home_part_2">Welcome to the <span class="title"><a href="#">Linkers' Project</a></span>, where
-                we make messaging across WhatsApp, Instagram, Telegram, and email a breeze. Our user-friendly platform
-                streamlines communication, reducing effort and eliminating errors. Say hello to efficient messaging with
-                the Linkers' Project. </div>
+            <div class="home_part_1"></div>
+            <div class="home_part_2">
+                Welcome to the
+                <span class="title"><a href="#">Linkers' Project</a></span>, where we make messaging across WhatsApp,
+                Instagram, Telegram, and
+                email a breeze. Our user-friendly platform streamlines communication,
+                reducing effort and eliminating errors. Say hello to efficient
+                messaging with the Linkers' Project.
+            </div>
             <div class="home_part_3">
                 <span class="title">Services Provided: </span>
                 <li>Generate Pre-filled Links</li>
@@ -51,15 +65,22 @@
                 <li>Error-Free Enhanced User Experience</li>
             </div>
             <div class="home_part_4">
-                <a href="#service">Generate Link <i class="fa-solid fa-link fa-2xs" style="color: #000000;"></i></a>
+                <a href="#service">Generate Link
+                    <i class="fa-solid fa-link fa-2xs" style="color: #000000"></i></a>
             </div>
         </div>
     </div>
-    <hr style="width: 90%; text-align: center; margin-top: 50px; margin-bottom: 30px;">
+    <hr style="
+        width: 90%;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+      " />
     <div class="services" id="services">
         <div class="title_sec">Services</div>
         <div class="service_container">
-            <div id="services_title">Select Application you want to generate Link for:
+            <div id="services_title">
+                Select Application you want to generate Link for:
                 <div class="apptray">
                     <a href="" class="icon instagram"><i class="fa-brands fa-instagram fa-2xl"></i></a>
                     <a href="" class="icon facebook"><i class="fa-brands fa-facebook fa-2xl"></i></a>
@@ -69,19 +90,64 @@
                 </div>
             </div>
             <div class="ig_content">
-                <input type="text" placeholder="Enter IG Profile name to get Profile Link" name="text" class="input">
+                <input type="text" placeholder="Enter IG Profile name to get Profile Link" name="text" class="input" />
                 <div class="buttons">
-                    <button class="btn2"> Button
-                    </button>
+                    <button class="btn2">Button</button>
                     <button class="Btn">
                         <span class="text">Copy Link</span>
                         <span class="svgIcon">
-                          <svg fill="white" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"></path></svg>
+                            <svg fill="white" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z">
+                                </path>
+                            </svg>
                         </span>
-                      </button>
+                    </button>
                 </div>
             </div>
         </div>
+    </div>
+    <hr style="
+        width: 90%;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+      " />
+    <div class="contact" id="contact">
+        <div class="parent">
+            <div class="div1"> </div>
+            <div class="div2">
+                <table>
+                    <tr>
+                        <th id="heading"><strong>Hello,</strong></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            My name is &nbsp;
+                            <input type="text" name="name" id="name" placeholder="Enter full Name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            my email address is &nbsp;
+                            <input type="email" name="email" id="email" placeholder="Enter email ID" />
+                            .
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            I wanted to ask &nbsp;
+                            <input type="text" name="message" id="message" placeholder="Enter message/query" />
+                    </tr>
+                    </td>
+                    <tr>
+                        <td>
+                    </tr>
+                    </td>
+                </table>
+            </div>
+        </div>
+
     </div>
 </body>
 

@@ -1,0 +1,48 @@
+.contact {
+   border-radius: 22px;
+   background: rgba(217, 217, 217, 0.50);
+   width: 1328px;
+   height: auto;
+   flex-shrink: 0;
+   margin: auto;
+   margin-top: 10px;
+   padding: 20px;
+}
+
+#heading {
+   text-align: left;
+   font-family: 'Inspiration', cursive;
+   font-family: 'Noto Serif Balinese', serif;
+}
+
+.parent {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: none;
+   grid-column-gap: 0px;
+   grid-row-gap: 0px;
+}
+
+.div1 {
+   grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+   grid-area: 1 / 2 / 2 / 3;
+}
+
+table>input {
+   border: 2px solid #FF5733;
+}
+
+tr {
+   font-family: 'Barlow', sans-serif;
+   /* font-family: 'Inspiration', cursive; */
+}
+
+#name,
+#message,
+#email {
+   border-radius: 5px;
+}
+
