@@ -82,3 +82,30 @@
     letter-spacing: 0.39px;
     text-decoration-line: underline;
 }
+
+
+#scrollTopBtn {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.5s ease;
+    /* Added transition for opacity */
+}
+
+#scrollTopBtn:hover {
+    background-color: #0056b3;
+}
+
+#scrollTopBtn.visible {
+    opacity: 1;
+    display: block;
+}

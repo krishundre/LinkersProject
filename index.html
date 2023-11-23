@@ -23,7 +23,12 @@
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/services.css" />
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/about_us.css">
+    <script src="index.js"></script>
+    <script>
 
+
+    </script>
 </head>
 
 <body>
@@ -91,18 +96,19 @@
             </div>
             <div class="ig_content">
                 <input type="text" placeholder="Enter IG Profile name to get Profile Link" name="text" class="input" />
-                <div class="buttons">
-                    <button class="btn2">Button</button>
-                    <button class="Btn">
-                        <span class="text">Copy Link</span>
-                        <span class="svgIcon">
-                            <svg fill="white" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z">
-                                </path>
-                            </svg>
-                        </span>
-                    </button>
+                <div class="buttons_holder">
+                    <button class="btn2">Generate Link</button>
+                    <div id="button_tray">
+
+                        <!-- start the realm of the buttons -->
+                        <div id="buttons_">
+                            <a href="#" class="btn blue">Test Link</a>
+                            <a href="#" class="btn green">Copy Link</a>
+                            <a href="#" class="btn red">View QR Code</a>
+                            <a href="#" class="btn purple">Anchor Tags</a>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,9 +119,43 @@
         margin-top: 50px;
         margin-bottom: 30px;
       " />
+    <div id="aboutus" class="aboutus">
+        <div class="title_sec">
+            More on this side
+            <div class="parent_2">
+                <div class="div1_2">
+                    <h3 id="inner_title">About Website</h3>
+                    <p id="aboutus_content_p1">
+                        Explore the Linkers' Project: Simplify messaging across WhatsApp, Instagram, Telegram, and
+                        email. Generate pre-filled links for quick and accurate communication. Effortlessly connect with
+                        friends or clients, saving time and reducing errors. Say goodbye to typos, and enjoy a seamless
+                        messaging experience. Join us today for smoother conversations!
+                    </p><br>
+                    <h3 id="inner_title">About Developer</h3>
+                    <p id="aboutus_content_p1">
+                        Meet our coding maestro, Krish Undre, currently pursuing a BCA at Somaiya College. Krish is a
+                        tech trailblazer who's always up for a coding challenge. With an insatiable curiosity and a
+                        penchant for pushing the boundaries of what's possible, Krish brings innovation to life with
+                        every line of code. When not crafting digital wonders, you'll find this coding virtuoso
+                        exploring new horizons in the tech universe.
+                    </p>
+                </div>
+                <div class="div2_2">
+                    <img src="Images/_DSC1671.JPG" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr style="
+      width: 90%;
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    " />
     <div class="contact" id="contact">
         <div class="parent">
-            <div class="div1"> </div>
+            <div class="div1"><img src="Images/contact_form.svg" alt="Contact Form" srcset=""></div>
             <div class="div2">
                 <table>
                     <tr>
@@ -124,31 +164,35 @@
                     <tr>
                         <td>
                             My name is &nbsp;
-                            <input type="text" name="name" id="name" placeholder="Enter full Name" />
+                            <input type="text" name="name" id="name" placeholder="Enter full Name" required />*,
                         </td>
                     </tr>
                     <tr>
                         <td>
                             my email address is &nbsp;
-                            <input type="email" name="email" id="email" placeholder="Enter email ID" />
+                            <input type="email" name="email" id="email" placeholder="Enter email ID" required />*
                             .
                         </td>
                     </tr>
                     <tr>
                         <td>
                             I wanted to ask &nbsp;
-                            <input type="text" name="message" id="message" placeholder="Enter message/query" />
+                            <input type="text" name="message" id="message" placeholder="Enter message/query"
+                                required />*
+                        </td>
                     </tr>
-                    </td>
                     <tr>
                         <td>
+                            <button type="button" onclick="submitForm()" id="submitBtn">Submit</button>
+                            <p id="submittedMessage" class="submitted-message"></p>
+                        </td>
                     </tr>
-                    </td>
+
                 </table>
             </div>
         </div>
-
     </div>
+    <button id="scrollTopBtn" onclick="scrollToTop()"><i class="fa-solid fa-up-long"></i></button>
 </body>
 
 </html>

@@ -7,6 +7,7 @@
    margin: auto;
    margin-top: 10px;
    padding: 20px;
+   font-size: 15px;
 }
 
 #heading {
@@ -25,24 +26,75 @@
 
 .div1 {
    grid-area: 1 / 1 / 2 / 2;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   position: relative;
+}
+
+.div1::before {
+   content: "";
+   position: absolute;
+   width: 180px;
+   height: 220px;
+   background-color: #FF5733;
+   border-radius: 50% 50% 40% 40%;
+   /* Adjust the values to achieve the jelly-like shape */
+   animation: bounce 3s infinite alternate;
+}
+
+.div1 img {
+   width: 201px;
+   height: 300px;
+   z-index: 1;
+}
+
+@keyframes bounce {
+   from {
+      transform: translateX(-40px);
+
+   }
+
+   to {
+      transform: translateX(40px);
+   }
 }
 
 .div2 {
    grid-area: 1 / 2 / 2 / 3;
+   background-color: #d9ebf9;
+   padding: 20px;
+   height: auto;
+   border-radius: 10px;
 }
 
 table>input {
    border: 2px solid #FF5733;
 }
 
-tr {
-   font-family: 'Barlow', sans-serif;
-   /* font-family: 'Inspiration', cursive; */
-}
-
 #name,
 #message,
 #email {
+   font-size: 15px;
    border-radius: 5px;
 }
 
+button {
+   background-color: #FF5733;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+button:hover {
+   background-color: #FF774D;
+   transform: scale(1.1);
+}
+
+td {
+   padding-top: 15px;
+   padding-bottom: 15px;
+}
