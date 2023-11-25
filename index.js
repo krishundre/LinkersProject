@@ -47,3 +47,101 @@ function scrollToTop() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
+
+function validateInput() {
+  // Get the input element
+  var inputElement = document.querySelector(".input");
+
+  // Get the generate button
+  var generateBtn = document.getElementById("generateBtn");
+
+  // Get the test link and copy link elements
+  var testLink = document.getElementById("testLink");
+  var copyLink = document.getElementById("copyLink");
+  var inputWarning = document.getElementById("input_warning");
+
+  // Show or hide the warning message based on input presence
+  inputWarning.style.display =
+    inputElement.value.trim() === "" ? "block" : "none";
+
+  // Enable the generate button if the input has data, otherwise disable it
+  generateBtn.disabled = inputElement.value.trim() === "";
+
+  // Disable the test link and copy link initially and after input warning
+  testLink.disabled = true;
+  copyLink.disabled = true;
+}
+function generateLink(action) {
+  // Get the current scroll position
+  var scrollPosition = window.scrollY;
+
+  // Construct the Instagram profile link
+  var inputElement = document.querySelector(".input");
+  var userInput = inputElement.value.trim(); // Get user input
+
+  // Construct the full Instagram profile link with proper encoding
+  var generatedLink =
+    "https://www.instagram.com/" + encodeURIComponent(userInput);
+
+  // Set the generated link as the value of the input field
+  inputElement.value = generatedLink;
+
+  // Open the generated link in a new tab if the action is 'test'
+  if (action === "test") {
+    window.open(generatedLink, "_blank");
+  }
+
+  // Enable buttons in the button_tray
+  var buttonTray = document.getElementById("buttons_holder");
+  buttonTray.classList.remove("disabled-buttons");
+
+  // Restore the scroll position after the link is generated
+  window.scrollTo(0, scrollPosition);
+
+  // Enable the copy link button
+  var copyLink = document.getElementById("copyLink");
+  copyLink.disabled = false;
+
+  // Additional logic for generating the link goes here
+  // For demonstration purposes, we'll just log a message
+  console.log("Link generated!");
+}
+
+function testLink() {
+  // Construct the Instagram profile link
+  var inputElement = document.querySelector(".input");
+  var userInput = inputElement.value.trim(); // Get user input
+
+  // Construct the full Instagram profile link with proper encoding
+  var testLink = "https://www.instagram.com/" + encodeURIComponent(userInput);
+
+  // Open the test link in a new tab
+  window.open(testLink, "_blank");
+
+  // Additional logic for testing the link goes here
+  // For demonstration purposes, we'll just log a message
+  console.log("Testing link...");
+}
+
+function copyLink() {
+  // Get the generated link input field
+  var generatedLinkField = document.querySelector(".input");
+
+  // Set the generated link as the value of the input field
+  generatedLinkField.value =
+    "https://www.instagram.com/" +
+    encodeURIComponent(generatedLinkField.value.trim());
+
+  // Select the text in the generated link input field
+  generatedLinkField.select();
+  generatedLinkField.setSelectionRange(0, 99999); /* For mobile devices */
+
+  // Copy the selected text to the clipboard
+  document.execCommand("copy");
+
+  // Deselect the text
+  generatedLinkField.blur();
+
+  // Log a message or perform any other actions after copying
+  console.log("Link copied to clipboard!");
+}
