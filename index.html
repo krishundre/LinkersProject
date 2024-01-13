@@ -103,16 +103,21 @@ margin-bottom: 30px;
                 <div class="buttons_holder"><button class="btn2" id="generateBtn" onclick="generateLink()"
                         disabled>Generate Link </button>
                     <div id="button_tray">
-                        <div id="buttons_holder" class="disabled-buttons"><a href="#" class="btn blue" id="testLink"
+                        <div id="buttons_holder" class="disabled-buttons"><a class="btn blue" id="testLink"
                                 onclick="testLink()" disabled>Test Link &nbsp;
                                 <i class="fa-solid fa-arrow-up-right-from-square" style="color: #000000;"></i></a><a
-                                href="#" class="btn green" id="copyLink" onclick="copyLink()" disabled>Copy Link
+                                class="btn green" id="copyLink" onclick="copyLink()" disabled>Copy Link
                                 &nbsp;
-                                <i class="fa-solid fa-copy" style="color: #000000;"></i></a><a href="#" class="btn red"
+                                <i class="fa-solid fa-copy" style="color: #000000;"></i></a><a class="btn red"
                                 id="generateQRCode" disabled onclick="generateQRCode()">View QR Code &nbsp;
-                                <i class="fa-solid fa-qrcode" style="color: #000000;"></i></a><a href="#"
-                                class="btn purple" id="anchorTags" disabled>Anchor Tags &nbsp;
+                                <i class="fa-solid fa-qrcode" style="color: #000000;"></i></a><a class="btn purple"
+                                id="anchorTags" disabled onclick="anchorcode()">Anchor Tags &nbsp;
                                 <i class="fa-solid fa-code" style="color: #000000;"></i></a></div>
+                    </div>
+                </div>
+                <div id="qr-code-section" style="display: none;">
+                    <h2 style="text-align: center;">Generated QR Code</h2>
+                    <div id="qr-code">
                     </div>
                 </div>
             </div>
@@ -212,9 +217,8 @@ margin-bottom: 30px;
                 </div>
             </div>
             <div id="qr-code-section" style="display: none;">
-                <h2>Generated QR Code</h2>
-                <div id="qr-code">
-                    <img id="logo" src="your_logo.png" alt="Logo" />
+                <h2 style="text-align: center;">Generated QR Code</h2>
+                <div id="qr-code" style="align-items: center;">
                 </div>
             </div>
 

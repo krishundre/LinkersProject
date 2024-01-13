@@ -166,26 +166,54 @@ function copyLink() {
   // Log a message or perform any other actions after copying
   console.log("Link copied to clipboard!");
 }
-
+var count=1;
 function generateQRCode() {
   // Get the input field value
   var generatedLinkField = document.querySelector(".input");
 
   // Check if the input value is not empty
-  if (generatedLinkField !== "") {
+  if (generatedLinkField !== "" && count==1) {
       // Create a QR code with the input value
       var qrCode = new QRCode(document.getElementById("qr-code"), {
           text: generatedLinkField,
           width: 200,
           height: 200,
       });
+      count++;
       console.log("qr generated");
-      const logo = document.getElementById("logo");
-  qrCode.appendChild(logo);
+      
       // Show the QR code section
       document.getElementById("qr-code-section").style.display = "block";
   } else {
-      alert("Please enter a valid input before generating the QR code.");
+      alert("QR code already generated.");
   }
 
+}
+function anchorcode() {
+  // Get the generated link input field
+  var generatedLinkField = document.querySelector(".input");
+
+  // Get the value of the input field
+  var inputValue = generatedLinkField.value;
+
+  // Construct the anchor tag code
+  var codeforweb = "<a href=\"" + inputValue + "\" title=\"Instagram\">Click to visit us on Instagram</a>  // This code was generated on Linkers' Project. Visit us for more";
+
+  // Create a temporary textarea to copy the code
+  var tempTextarea = document.createElement("textarea");
+  tempTextarea.value = codeforweb;
+  document.body.appendChild(tempTextarea);
+
+  // Select the text in the textarea
+  tempTextarea.select();
+  tempTextarea.setSelectionRange(0, 99999); /* For mobile devices */
+
+  // Copy the selected text to the clipboard
+  document.execCommand("copy");
+
+  // Remove the temporary textarea
+  document.body.removeChild(tempTextarea);
+
+  // Log a message or perform any other actions after copying
+  console.log("Link code copied to clipboard!");
 }
