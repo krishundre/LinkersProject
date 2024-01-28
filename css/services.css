@@ -281,7 +281,8 @@
 
 /* Add this CSS to handle the disabled state of buttons */
 .disabled-buttons a,
-.disabled-buttonsFB a {
+.disabled-buttonsFB a,
+.disabled-buttonsLK a {
   pointer-events: none;
   opacity: 0.5;
   cursor: not-allowed;
