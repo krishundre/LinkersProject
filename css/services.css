@@ -107,7 +107,8 @@
   margin-bottom: 10px;
 }
 
-.input {
+.input,
+.inputFB {
   border-radius: 10px;
   outline: 3px solid #FEBF00;
   border: 0;

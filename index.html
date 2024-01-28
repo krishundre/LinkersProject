@@ -100,7 +100,7 @@ margin-bottom: 30px;
                 <input type="text" placeholder="Enter IG Profile name to get Profile Link" name="text" class="input"
                     oninput="validateInput()" />
                 <h3 id="input_warning" style="display: none;">Please enter input to activate below button</h3>
-                <div class="buttons_holder"><button class="btn2" id="generateBtn" onclick="generateLink()"
+                <div class="buttons_holder"><button class="btn2" id="generateBtn" onclick="generateLinkIG()"
                         disabled>Generate Link </button>
                     <div id="button_tray">
                         <div id="buttons_holder" class="disabled-buttons"><a class="btn blue" id="testLink"
@@ -115,33 +115,33 @@ margin-bottom: 30px;
                                 <i class="fa-solid fa-code" style="color: #000000;"></i></a></div>
                     </div>
                 </div>
-                <div id="qr-code-section" style="display: none;">
-                    <h2 style="text-align: center;">Generated QR Code</h2>
-                    <div id="qr-code">
-                    </div>
-                </div>
+
             </div>
             <div class="fb_content" id="fbContent" style="display: none;">
                 <h1 id="app_name"> Facebook Link generator</h1>
-                <input type="text" placeholder="URL of that awesome thing you want to share" name="text" class="input"
-                    oninput="validateInput()" />
-                <h3 id="input_warning" style="display: none;">Please enter input to activate below button</h3>
-                <div class="buttons_holder"><button class="btn2" id="generateBtn" onclick="generateLink()"
-                        disabled>Generate Link </button>
-                    <div id="button_tray">
-                        <div id="buttons_holder" class="disabled-buttons"><a href="#" class="btn blue" id="testLink"
-                                onclick="testLink()" disabled>Test Link &nbsp;
-                                <i class="fa-solid fa-arrow-up-right-from-square" style="color: #000000;"></i></a><a
-                                href="#" class="btn green" id="copyLink" onclick="copyLink()" disabled>Copy Link
-                                &nbsp;
-                                <i class="fa-solid fa-copy" style="color: #000000;"></i></a><a href="#" class="btn red"
-                                id="viewQRCode" disabled>View QR Code &nbsp;
-                                <i class="fa-solid fa-qrcode" style="color: #000000;"></i></a><a href="#"
-                                class="btn purple" id="anchorTags" disabled>Anchor Tags &nbsp;
-                                <i class="fa-solid fa-code" style="color: #000000;"></i></a></div>
+                <input type="text" placeholder="URL of that awesome thing you want to share" name="text" class="inputFB"
+                    oninput="validateInputFB()" />
+                <h3 id="input_warningFB" style="display: none;">Please enter input to activate below button</h3>
+                <button class="btn2" id="generateBtn" onclick="generateLinkFB()">Generate Link </button>
+                <div id="button_trayFB">
+                    <div id="buttons_holder" class="disabled-buttonsFB">
+                        <a class="btn blue" id="testLinkFB" onclick="testLink()" disabled>Test Link &nbsp;
+                            <i class="fa-solid fa-arrow-up-right-from-square" style="color: #000000;"></i>
+                        </a>
+                        <a class="btn green" id="copyLinkFB" onclick="copyLink()" disabled>Copy Link
+                            &nbsp;
+                            <i class="fa-solid fa-copy" style="color: #000000;"></i>
+                        </a>
+                        <a class="btn red" id="generateQRCodeFB" disabled onclick="generateQRCode()">View QR Code &nbsp;
+                            <i class="fa-solid fa-qrcode" style="color: #000000;"></i>
+                        </a>
+                        <a class="btn purple" id="anchorTagsFB" disabled onclick="anchorcode()">Anchor Tags &nbsp;
+                            <i class="fa-solid fa-code" style="color: #000000;"></i>
+                        </a>
                     </div>
                 </div>
             </div>
+
             <div class="email_content" id="emailContent" style="display: none;">
                 <h1 id="app_name"> Email Link generator</h1>
                 <input type="email" placeholder="Enter Receipent's Email ID" name="email_id" class="input"
@@ -157,7 +157,8 @@ margin-bottom: 30px;
                     oninput="validateInput()" />
 
                 <div class="buttons_holder"><button class="btn2" id="generateBtn" onclick="generateLink()"
-                        disabled>Generate Link </button>
+                        disabled>Generate
+                        Link </button>
                     <div id="button_tray">
                         <div id="buttons_holder" class="disabled-buttons"><a href="#" class="btn blue" id="testLink"
                                 onclick="testLink()" disabled>Test Link &nbsp;
@@ -180,7 +181,8 @@ margin-bottom: 30px;
                 <input type="text" placeholder="Enter Message you want to be sent" name="wa_phone" class="input"
                     oninput="validateInput()" />
                 <div class="buttons_holder"><button class="btn2" id="generateBtn" onclick="generateLink()"
-                        disabled>Generate Link </button>
+                        disabled>Generate
+                        Link </button>
                     <div id="button_tray">
                         <div id="buttons_holder" class="disabled-buttons"><a href="#" class="btn blue" id="testLink"
                                 onclick="testLink()" disabled>Test Link &nbsp;
@@ -201,7 +203,8 @@ margin-bottom: 30px;
                     oninput="validateInput()" />
                 <h3 id="input_warning" style="display: none;">Please enter input to activate below button</h3>
                 <div class="buttons_holder"><button class="btn2" id="generateBtn" onclick="generateLink()"
-                        disabled>Generate Link </button>
+                        disabled>Generate
+                        Link </button>
                     <div id="button_tray">
                         <div id="buttons_holder" class="disabled-buttons"><a href="#" class="btn blue" id="testLink"
                                 onclick="testLink()" disabled>Test Link &nbsp;
@@ -221,8 +224,8 @@ margin-bottom: 30px;
                 <div id="qr-code" style="align-items: center;">
                 </div>
             </div>
-
         </div>
+    </div>
     </div>
     <hr style="
 width: 90%;
