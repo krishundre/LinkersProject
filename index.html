@@ -122,13 +122,13 @@ margin-bottom: 30px;
                 <input type="text" placeholder="URL of that awesome thing you want to share" name="text" class="inputFB"
                     oninput="validateInputFB()" />
                 <h3 id="input_warningFB" style="display: none;">Please enter input to activate below button</h3>
-                <button class="btn2" id="generateBtn" onclick="generateLinkFB()">Generate Link </button>
+                <button class="btn2" id="generateBtnFB" onclick="generateLinkFB()">Generate Link </button>
                 <div id="button_trayFB">
-                    <div id="buttons_holder" class="disabled-buttonsFB">
-                        <a class="btn blue" id="testLinkFB" onclick="testLink()" disabled>Test Link &nbsp;
+                    <div id="buttons_holderFB" class="disabled-buttonsFB">
+                        <a class="btn blue" id="testLinkFB" onclick="testLinkFB()" disabled>Test Link &nbsp;
                             <i class="fa-solid fa-arrow-up-right-from-square" style="color: #000000;"></i>
                         </a>
-                        <a class="btn green" id="copyLinkFB" onclick="copyLink()" disabled>Copy Link
+                        <a class="btn green" id="copyLinkFB" onclick="copyLinkFB()" disabled>Copy Link
                             &nbsp;
                             <i class="fa-solid fa-copy" style="color: #000000;"></i>
                         </a>
@@ -199,23 +199,25 @@ margin-bottom: 30px;
             </div>
             <div class="lk_content" id="lkContent" style="display: none;">
                 <h1 id="app_name"> Linkedin Link generator</h1>
-                <input type="text" placeholder="Enter link URL you want to share as post" name="text" class="input"
-                    oninput="validateInput()" />
-                <h3 id="input_warning" style="display: none;">Please enter input to activate below button</h3>
-                <div class="buttons_holder"><button class="btn2" id="generateBtn" onclick="generateLink()"
+                <input type="text" placeholder="Enter link URL you want to share as post" name="text" class="inputLK"
+                    oninput="validateInputLK()" />
+                <h3 id="input_warningLK" style="display: none;">Please enter input to activate below button</h3>
+                <div class="buttons_holderLK"><button class="btn2" id="generateBtnLK" onclick="generateLinkLK()"
                         disabled>Generate
                         Link </button>
-                    <div id="button_tray">
-                        <div id="buttons_holder" class="disabled-buttons"><a href="#" class="btn blue" id="testLink"
-                                onclick="testLink()" disabled>Test Link &nbsp;
-                                <i class="fa-solid fa-arrow-up-right-from-square" style="color: #000000;"></i></a><a
-                                href="#" class="btn green" id="copyLink" onclick="copyLink()" disabled>Copy Link
+                    <div id="button_trayLK">
+                        <div id="buttons_holderLK" class="disabled-buttonsLK">
+                            <a class="btn blue" id="testLink" onclick="testLinkLK()" disabled>Test Link &nbsp;
+                                <i class="fa-solid fa-arrow-up-right-from-square" style="color: #000000;"></i>
+                            </a>
+                            <a class="btn green" id="copyLink" onclick="copyLinkLK()" disabled>Copy Link
                                 &nbsp;
-                                <i class="fa-solid fa-copy" style="color: #000000;"></i></a><a href="#" class="btn red"
-                                id="viewQRCode" disabled>View QR Code &nbsp;
-                                <i class="fa-solid fa-qrcode" style="color: #000000;"></i></a><a href="#"
-                                class="btn purple" id="anchorTags" disabled>Anchor Tags &nbsp;
-                                <i class="fa-solid fa-code" style="color: #000000;"></i></a></div>
+                                <i class="fa-solid fa-copy" style="color: #000000;"></i>
+                            </a><a class="btn red" id="viewQRCode" disabled>View QR Code &nbsp;
+                                <i class="fa-solid fa-qrcode" style="color: #000000;"></i></a><a class="btn purple"
+                                id="anchorTags" disabled>Anchor Tags &nbsp;
+                                <i class="fa-solid fa-code" style="color: #000000;"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>

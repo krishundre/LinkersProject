@@ -108,7 +108,8 @@
 }
 
 .input,
-.inputFB {
+.inputFB,
+.inputLK {
   border-radius: 10px;
   outline: 3px solid #FEBF00;
   border: 0;
@@ -123,7 +124,9 @@
   text-align: center;
 }
 
-.input:focus {
+.input:focus,
+.inputFB:focus,
+.inputLK:focus {
   outline-offset: 10px;
   background-color: #fff
 }
@@ -277,7 +280,8 @@
 
 
 /* Add this CSS to handle the disabled state of buttons */
-.disabled-buttons a {
+.disabled-buttons a,
+.disabled-buttonsFB a {
   pointer-events: none;
   opacity: 0.5;
   cursor: not-allowed;
