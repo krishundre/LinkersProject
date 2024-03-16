@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/services.css" />
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/about_us.css">
+    <link rel="stylesheet" href="css/help.css">
     <link rel="stylesheet" href="css/footer.css">
     <script src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
@@ -53,7 +54,7 @@
             Help</a><a href="#contact"><i class="fa-solid fa-address-card fa-xs" style="color: #ffffff"></i>&nbsp;
             Contact us</a>
     </div>
-    <div class="home">
+    <div class="home" id="home">
         <div class="title_sec">Home</div>
         <div class="home_grid">
             <div class="home_part_1"></div>
@@ -270,16 +271,21 @@ text-align: center;
 margin-top: 50px;
 margin-bottom: 30px;
 " />
-    <div id="help" class="help" style="height: auto; width: auto;">
-        <div class="title_sec">Need Help??</div>
-        <div class="MagicSlideshow" data-options="autoplay: false; keyboard: false; preload: true" style="width: 1002px;
-        height: 711px;">
-            <img src="Help Slide show images/1.png" data-fullscreen-image="Help Slide show images/1.png">
-            <img src="Help Slide show images/2.png" data-fullscreen-image="Help Slide show images/2.png">
-            <img src="Help Slide show images/3.png" data-fullscreen-image="Help Slide show images/3.png">
-            <img src="Help Slide show images/4.png" data-fullscreen-image="Help Slide show images/4.png">
+    <div id="help" class="help">
+        <div class="title_sec">Help</div>
+        <div class="image-slideshow">
+            <div id="button_for_slideshow">
+                <img class="buttons_slideshow" src="Next Icon.svg" alt="Click To see previous icon"
+                    style="rotate:  180deg;" onclick="prev()">
+                <img class="buttons_slideshow" src="Next Icon.svg" alt="Click To see next icon" onclick="next()">
+            </div>
+            <div id="images_for_slideshow">
+                <img class="images_for_slideshow" id="main-image" src="Help Slide show images/1.png"
+                    alt="Images with Instructions for help">
 
+            </div>
         </div>
+    </div>
     </div>
     <hr style="
 width: 90%;

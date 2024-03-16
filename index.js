@@ -70,50 +70,48 @@ function toggleContent(contentId) {
 
 function validateInput() {
   // Get the input element
-  var inputElement = document.querySelector(".input");
-  
-  // Get the generate button
-  var generateBtn = document.getElementById("generateBtn");
+  var inputElement=document.querySelector(".input");
 
-  var inputWarning = document.getElementById("input_warning");
+  // Get the generate button
+  var generateBtn=document.getElementById("generateBtn");
+
+  var inputWarning=document.getElementById("input_warning");
 
   // Show or hide the warning message based on input presence
-  inputWarning.style.display =
-    inputElement.value.trim() === "" ? "block" : "none";
+  inputWarning.style.display=inputElement.value.trim()===""? "block": "none";
 
   // Enable the generate button if the input has data, otherwise disable it
-  generateBtn.disabled = inputElement.value.trim() === "";
+  generateBtn.disabled=inputElement.value.trim()==="";
 
   console.log("Checking Input");
 }
 
 function generateLinkIG() {
   // Get the current scroll position
-  var scrollPosition = window.scrollY;
+  var scrollPosition=window.scrollY;
 
   // Construct the Instagram profile link
-  var inputElement = document.querySelector(".input");
-  var userInput = inputElement.value.trim(); // Get user input
+  var inputElement=document.querySelector(".input");
+  var userInput=inputElement.value.trim(); // Get user input
 
   // Construct the full Instagram profile link with proper encoding
-  var generatedLink =
-    "https://www.instagram.com/" + encodeURIComponent(userInput);
+  var generatedLink="https://www.instagram.com/"+encodeURIComponent(userInput);
 
   // Set the generated link as the value of the input field
-  inputElement.value = generatedLink;
+  inputElement.value=generatedLink;
 
   // Open the generated link in a new tab if the action is 'test'
 
   // Enable buttons in the button_tray
-  var buttonTray = document.getElementById("buttons_holder");
+  var buttonTray=document.getElementById("buttons_holder");
   buttonTray.classList.remove("disabled-buttons");
 
   // Restore the scroll position after the link is generated
   window.scrollTo(0, scrollPosition);
 
   // Enable the copy link button
-  var copyLink = document.getElementById("copyLink");
-  copyLink.disabled = false;
+  var copyLink=document.getElementById("copyLink");
+  copyLink.disabled=false;
 
   // Additional logic for generating the link goes here
   // For demonstration purposes, we'll just log a message
@@ -127,19 +125,18 @@ function generateLinkIG() {
 
 function validateInputFB() {
   // Get the input element
-  var inputElement = document.querySelector(".inputFB");
-  
-  // Get the generate button
-  var generateBtn = document.getElementById("generateBtnFB");
+  var inputElement=document.querySelector(".inputFB");
 
-  var inputWarning = document.getElementById("input_warningFB");
+  // Get the generate button
+  var generateBtn=document.getElementById("generateBtnFB");
+
+  var inputWarning=document.getElementById("input_warningFB");
 
   // Show or hide the warning message based on input presence
-  inputWarning.style.display =
-    inputElement.value.trim() === "" ? "block" : "none";
+  inputWarning.style.display=inputElement.value.trim()===""? "block": "none";
 
   // Enable the generate button if the input has data, otherwise disable it
-  generateBtn.disabled = inputElement.value.trim() === "";
+  generateBtn.disabled=inputElement.value.trim()==="";
 
   console.log("Checking Input");
 
@@ -149,32 +146,31 @@ function validateInputFB() {
 
 function generateLinkFB() {
   // Get the current scroll position
-  var scrollPosition = window.scrollY;
+  var scrollPosition=window.scrollY;
 
   // Construct the Instagram profile link
-  var inputElement = document.querySelector(".inputFB");
+  var inputElement=document.querySelector(".inputFB");
   console.log(inputElement);
-  var userInput = inputElement.value.trim(); // Get user input
+  var userInput=inputElement.value.trim(); // Get user input
 
   // Construct the full Instagram profile link with proper encoding
-  var generatedLink =
-    "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(userInput);
+  var generatedLink="https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(userInput);
 
   // Set the generated link as the value of the input field
-  inputElement.value = generatedLink;
+  inputElement.value=generatedLink;
 
   // Open the generated link in a new tab if the action is 'test'
 
   // Enable buttons in the button_tray
-  var buttonTrayFB = document.getElementById("buttons_holderFB");
+  var buttonTrayFB=document.getElementById("buttons_holderFB");
   buttonTrayFB.classList.remove("disabled-buttonsFB");
 
   // Restore the scroll position after the link is generated
   window.scrollTo(0, scrollPosition);
 
   // Enable the copy link button
-  var copyLink = document.getElementById("copyLink");
-  copyLink.disabled = false;
+  var copyLink=document.getElementById("copyLink");
+  copyLink.disabled=false;
 
   // Additional logic for generating the link goes here
   // For demonstration purposes, we'll just log a message
@@ -186,19 +182,18 @@ function generateLinkFB() {
 
 function validateInputLK() {
   // Get the input element
-  var inputElement = document.querySelector(".inputLK");
-  
-  // Get the generate button
-  var generateBtn = document.getElementById("generateBtnLK");
+  var inputElement=document.querySelector(".inputLK");
 
-  var inputWarning = document.getElementById("input_warningLK");
+  // Get the generate button
+  var generateBtn=document.getElementById("generateBtnLK");
+
+  var inputWarning=document.getElementById("input_warningLK");
 
   // Show or hide the warning message based on input presence
-  inputWarning.style.display =
-    inputElement.value.trim() === "" ? "block" : "none";
+  inputWarning.style.display=inputElement.value.trim()===""? "block": "none";
 
   // Enable the generate button if the input has data, otherwise disable it
-  generateBtn.disabled = inputElement.value.trim() === "";
+  generateBtn.disabled=inputElement.value.trim()==="";
 
   console.log("Checking Input");
 
@@ -208,32 +203,31 @@ function validateInputLK() {
 
 function generateLinkLK() {
   // Get the current scroll position
-  var scrollPosition = window.scrollY;
+  var scrollPosition=window.scrollY;
 
   // Construct the Instagram profile link
-  var inputElement = document.querySelector(".inputLK");
+  var inputElement=document.querySelector(".inputLK");
   console.log(inputElement);
-  var userInput = inputElement.value.trim(); // Get user input
+  var userInput=inputElement.value.trim(); // Get user input
 
   // Construct the full Instagram profile link with proper encoding
-  var generatedLink =
-    "https://www.linkedin.com/shareArticle?mini=true&url=" + encodeURIComponent(userInput);
+  var generatedLink="https://www.linkedin.com/shareArticle?mini=true&url="+encodeURIComponent(userInput);
 
   // Set the generated link as the value of the input field
-  inputElement.value = generatedLink;
+  inputElement.value=generatedLink;
 
   // Open the generated link in a new tab if the action is 'test'
 
   // Enable buttons in the button_tray
-  var buttonTrayLK = document.getElementById("buttons_holderLK");
+  var buttonTrayLK=document.getElementById("buttons_holderLK");
   buttonTrayLK.classList.remove("disabled-buttonsLK");
 
   // Restore the scroll position after the link is generated
   window.scrollTo(0, scrollPosition);
 
   // Enable the copy link button
-  var copyLink = document.getElementById("copyLink");
-  copyLink.disabled = false;
+  var copyLink=document.getElementById("copyLink");
+  copyLink.disabled=false;
 
   // Additional logic for generating the link goes here
   // For demonstration purposes, we'll just log a message
@@ -244,11 +238,11 @@ function generateLinkLK() {
 
 function testLink() {
   // Construct the Instagram profile link
-  var inputElement = document.querySelector(".input");
-  var userInput = inputElement.value.trim(); // Get user input
+  var inputElement=document.querySelector(".input");
+  var userInput=inputElement.value.trim(); // Get user input
 
   // Construct the full Instagram profile link with proper encoding
-  var testLink =  userInput;
+  var testLink=userInput;
 
   // Open the test link in a new tab
   window.open(testLink, "_blank");
@@ -257,19 +251,21 @@ function testLink() {
   // For demonstration purposes, we'll just log a message
   console.log("Testing link...");
 }
+
 function copyLink() {
   // Get the generated link input field
-  var generatedLinkField = document.querySelector(".input");
+  var generatedLinkField=document.querySelector(".input");
 
   // Get the value of the input field
-  var inputValue = generatedLinkField.value;
+  var inputValue=generatedLinkField.value;
 
   // Set the generated link as the value of the input field
-  generatedLinkField.value = inputValue;
+  generatedLinkField.value=inputValue;
 
   // Select the text in the generated link input field
   generatedLinkField.select();
-  generatedLinkField.setSelectionRange(0, 99999); /* For mobile devices */
+  generatedLinkField.setSelectionRange(0, 99999);
+  /* For mobile devices */
 
   // Copy the selected text to the clipboard
   document.execCommand("copy");
@@ -283,11 +279,11 @@ function copyLink() {
 
 function testLinkFB() {
   // Construct the Instagram profile link
-  var inputElement = document.querySelector(".inputFB");
-  var userInput = inputElement.value.trim(); // Get user input
+  var inputElement=document.querySelector(".inputFB");
+  var userInput=inputElement.value.trim(); // Get user input
 
   // Construct the full Instagram profile link with proper encoding
-  var testLink =  userInput;
+  var testLink=userInput;
 
   // Open the test link in a new tab
   window.open(testLink, "_blank");
@@ -296,19 +292,21 @@ function testLinkFB() {
   // For demonstration purposes, we'll just log a message
   console.log("Testing link...");
 }
+
 function copyLinkFB() {
   // Get the generated link input field
-  var generatedLinkField = document.querySelector(".inputFB");
+  var generatedLinkField=document.querySelector(".inputFB");
 
   // Get the value of the input field
-  var inputValue = generatedLinkField.value;
+  var inputValue=generatedLinkField.value;
 
   // Set the generated link as the value of the input field
-  generatedLinkField.value = inputValue;
+  generatedLinkField.value=inputValue;
 
   // Select the text in the generated link input field
   generatedLinkField.select();
-  generatedLinkField.setSelectionRange(0, 99999); /* For mobile devices */
+  generatedLinkField.setSelectionRange(0, 99999);
+  /* For mobile devices */
 
   // Copy the selected text to the clipboard
   document.execCommand("copy");
@@ -322,11 +320,11 @@ function copyLinkFB() {
 
 function testLinkLK() {
   // Construct the Instagram profile link
-  var inputElement = document.querySelector(".inputLK");
-  var userInput = inputElement.value.trim(); // Get user input
+  var inputElement=document.querySelector(".inputLK");
+  var userInput=inputElement.value.trim(); // Get user input
 
   // Construct the full Instagram profile link with proper encoding
-  var testLink =  userInput;
+  var testLink=userInput;
 
   // Open the test link in a new tab
   window.open(testLink, "_blank");
@@ -335,19 +333,21 @@ function testLinkLK() {
   // For demonstration purposes, we'll just log a message
   console.log("Testing link...");
 }
+
 function copyLinkLK() {
   // Get the generated link input field
-  var generatedLinkField = document.querySelector(".inputLK");
+  var generatedLinkField=document.querySelector(".inputLK");
 
   // Get the value of the input field
-  var inputValue = generatedLinkField.value;
+  var inputValue=generatedLinkField.value;
 
   // Set the generated link as the value of the input field
-  generatedLinkField.value = inputValue;
+  generatedLinkField.value=inputValue;
 
   // Select the text in the generated link input field
   generatedLinkField.select();
-  generatedLinkField.setSelectionRange(0, 99999); /* For mobile devices */
+  generatedLinkField.setSelectionRange(0, 99999);
+  /* For mobile devices */
 
   // Copy the selected text to the clipboard
   document.execCommand("copy");
@@ -363,44 +363,51 @@ var count=1;
 
 function generateQRCode() {
   // Get the input field value
-  var generatedLinkField = document.querySelector(".inputFB");
+  var generatedLinkField=document.querySelector(".inputFB");
 
   // Check if the input value is not empty
-  if (generatedLinkField !== "" && count==1) {
-      // Create a QR code with the input value
-      var qrCode = new QRCode(document.getElementById("qr-code"), {
-          text: generatedLinkField,
-          width: 200,
-          height: 200,
-      });
-      count++;
-      console.log("qr generated");
-      
-      // Show the QR code section
-      document.getElementById("qr-code-section").style.display = "block";
-  } else {
-      alert("QR code already generated.");
+  if (generatedLinkField !==""&& count==1) {
+
+    // Create a QR code with the input value
+    var qrCode=new QRCode(document.getElementById("qr-code"), {
+        text: generatedLinkField,
+        width: 200,
+        height: 200,
+      }
+
+    );
+    count++;
+    console.log("qr generated");
+
+    // Show the QR code section
+    document.getElementById("qr-code-section").style.display="block";
+  }
+
+  else {
+    alert("QR code already generated.");
   }
 
 }
+
 function anchorcode() {
   // Get the generated link input field
-  var generatedLinkField = document.querySelector(".inputFB");
+  var generatedLinkField=document.querySelector(".inputFB");
 
   // Get the value of the input field
-  var inputValue = generatedLinkField.value;
+  var inputValue=generatedLinkField.value;
 
   // Construct the anchor tag code
-  var codeforweb = "<a href=\"" + inputValue + "\" title=\"Facebook\">Click to visit us on Facebook</a>  // This code was generated on Linkers' Project. Visit us for more";
+  var codeforweb="<a href=\""+inputValue+"\" title=\"Facebook\">Click to visit us on Facebook</a>  // This code was generated on Linkers' Project. Visit us for more";
 
   // Create a temporary textarea to copy the code
-  var tempTextarea = document.createElement("textarea");
-  tempTextarea.value = codeforweb;
+  var tempTextarea=document.createElement("textarea");
+  tempTextarea.value=codeforweb;
   document.body.appendChild(tempTextarea);
 
   // Select the text in the textarea
   tempTextarea.select();
-  tempTextarea.setSelectionRange(0, 99999); /* For mobile devices */
+  tempTextarea.setSelectionRange(0, 99999);
+  /* For mobile devices */
 
   // Copy the selected text to the clipboard
   document.execCommand("copy");
@@ -411,3 +418,37 @@ function anchorcode() {
   // Log a message or perform any other actions after copying
   console.log("Link code copied to clipboard!");
 }
+
+var imageUrls = ["Help Slide show images/1.png", "Help Slide show images/2.png", "Help Slide show images/3.png", "Help Slide show images/4.png"];
+var currentImageIndex = 0;
+function prev(){
+  currentImageIndex--;
+
+    // Reset to the last image if index goes below zero
+    if (currentImageIndex < 0) {
+      currentImageIndex = imageUrls.length - 1;
+    }
+
+    // Display the previous image
+    displayImage();
+}
+
+function next(){
+  currentImageIndex++;
+
+    // Reset to the first image if index exceeds array length
+    if (currentImageIndex >= imageUrls.length) {
+      currentImageIndex = 0;
+    }
+
+    // Display the next image
+    displayImage();
+}
+
+  function displayImage() {
+    // Get the main image element
+    var mainImage = document.getElementById("main-image");
+
+    // Set the source attribute of the main image to the current image URL
+    mainImage.src = imageUrls[currentImageIndex];
+  }

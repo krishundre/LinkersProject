@@ -1,0 +1,45 @@
+.help {
+    width: 100%;
+    height: 900px;
+}
+
+.image-slideshow {
+    margin-top: 20px;
+    margin-left: 155px;
+    margin-right: auto;
+    position: absolute;
+}
+
+.images_for_slideshow {
+    /* position: absolute; */
+    height: 800px;
+    width: 1200px;
+}
+
+.buttons_slideshow {
+    /* position: absolute; */
+    height: 20px;
+    width: 20px;
+    z-index: 10;
+
+}
+
+.buttons_slideshow:hover {
+    background-color: gray;
+
+}
+
+#button_for_slideshow {
+    /* z-index: 100; */
+    width: 1200px;
+    height: 800px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#images_for_slideshow {
+
+    position: absolute;
+}
