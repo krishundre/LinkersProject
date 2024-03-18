@@ -1,8 +1,8 @@
 .service_container {
   border-radius: 77px;
   background: rgba(217, 217, 217, 0.50);
-  width: 1328px;
-  height: auto;
+  width: 1330px;
+  height: 600px;
   min-height: 600px;
   flex-shrink: 0;
   margin: auto;
@@ -93,7 +93,7 @@
 .lk_content {
   padding-top: 20px;
   padding-bottom: 20px;
-  height: auto;
+  height: 350px;
   width: 900px;
   margin: auto;
   /* margin-top: 45px; */

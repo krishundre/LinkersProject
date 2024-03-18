@@ -1,3 +1,6 @@
+var inputElement;
+var generateBtn;
+var inputWarning;
 
 function validateInput() {
     // Get the input element
@@ -16,7 +19,39 @@ function validateInput() {
   
     console.log("Checking Input");
   }
+
+
+  function generateLinkIG() {
+
+    var inputElement=document.querySelector(".input");
+    var userInput=inputElement.value.trim(); // Get user input
   
+    // Construct the full Instagram profile link with proper encoding
+    var generatedLink="https://www.instagram.com/"+encodeURIComponent(userInput);
+  
+    // Set the generated link as the value of the input field
+    inputElement.value=generatedLink;
+  
+    // Open the generated link in a new tab if the action is 'test'
+  
+    // Enable buttons in the button_tray
+    var buttonTray=document.getElementById("buttons_holder");
+    buttonTray.classList.remove("disabled-buttons");
+  
+    // Restore the scroll position after the link is generated
+    window.scrollTo(0, scrollPosition);
+  
+    // Enable the copy link button
+    var copyLink=document.getElementById("copyLink");
+    copyLink.disabled=false;
+  
+    // Additional logic for generating the link goes here
+    // For demonstration purposes, we'll just log a message
+    console.log("Link generated!");
+    console.log("Buttons are open now");
+  }
+
+
   function generateLinkIG() {
     // Get the current scroll position
     var scrollPosition=window.scrollY;
