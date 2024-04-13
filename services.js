@@ -250,13 +250,13 @@ function validateInput() {
     // Log a message or perform any other actions after copying
     console.log("Link copied to clipboard!");
   }
-
+ countFB=1
   function generateQRCodeFB() {
     // Get the input field value
     var generatedLinkField=document.querySelector(".inputFB");
   
     // Check if the input value is not empty
-    if (generatedLinkField !==""&& count==1) {
+    if (generatedLinkField !==""&& countFB==1) {
       console.log(generatedLinkField.value)
       // Create a QR code with the input value
       var qrCode=new QRCode(document.getElementById("qr-codeFB"), {
