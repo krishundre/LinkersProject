@@ -77,7 +77,8 @@
 .select_app {
   background-color: wheat;
   width: 834px;
-  height: 60px;
+  min-height: 60px;
+  width: auto;
   /* align-items: center; */
   margin: 20px auto 10px auto;
   border-radius: 5px;
