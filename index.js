@@ -14,6 +14,7 @@ function SendMail() {
   );
 }
 
+
 function submitForm() {
   const submitButton=document.getElementById("submitBtn");
   const messageInput=document.getElementById("message");

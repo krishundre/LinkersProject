@@ -329,14 +329,14 @@ function validateInput() {
   
   function generateQRCode() {
     // Get the input field value
-    var generatedLinkField=document.querySelector(".inputFB");
+    var generatedLinkField=document.querySelector(".input");
   
     // Check if the input value is not empty
     if (generatedLinkField !==""&& count==1) {
-  
+      console.log(generatedLinkField.value)
       // Create a QR code with the input value
       var qrCode=new QRCode(document.getElementById("qr-code"), {
-          text: generatedLinkField,
+          text: generatedLinkField.value,
           width: 200,
           height: 200,
         }
@@ -357,13 +357,13 @@ function validateInput() {
   
   function anchorcode() {
     // Get the generated link input field
-    var generatedLinkField=document.querySelector(".inputFB");
+    var generatedLinkField=document.querySelector(".input");
   
     // Get the value of the input field
     var inputValue=generatedLinkField.value;
   
     // Construct the anchor tag code
-    var codeforweb="<a href=\""+inputValue+"\" title=\"Facebook\">Click to visit us on Facebook</a>  // This code was generated on Linkers' Project. Visit us for more";
+    var codeforweb="<a href=\""+inputValue+"\" title=\"Instagram\">Click to visit us on Instagram</a>  // This code was generated on Linkers' Project. Visit us for more";
   
     // Create a temporary textarea to copy the code
     var tempTextarea=document.createElement("textarea");

@@ -2,8 +2,10 @@
   border-radius: 77px;
   background: rgba(217, 217, 217, 0.50);
   width: 1330px;
-  height: 600px;
   min-height: 600px;
+  height: auto;
+  min-height: 600px;
+  padding-bottom: 20px;
   flex-shrink: 0;
   margin: auto;
   /* display: flex;
@@ -93,7 +95,8 @@
 .lk_content {
   padding-top: 20px;
   padding-bottom: 20px;
-  height: 350px;
+  min-height: 350px;
+  height: auto;
   width: 900px;
   margin: auto;
   /* margin-top: 45px; */
@@ -131,7 +134,6 @@
   background-color: #fff
 }
 
-.buttons_holder {}
 
 .btn2 {
   width: 20.5em;

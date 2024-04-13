@@ -46,6 +46,7 @@
             margin-top: 60px
         }
     </style>
+
     <div class="navbar" style="z-index: 10;">
         <div class=""><a href="#home" style="padding: 0%;">
                 <img src="Linkers' Logo Final.png" alt="Linkers' Project Logo" srcset=""
@@ -91,7 +92,8 @@ margin-bottom: 30px;
     <div class="services" id="services">
         <div class="title_sec">Services</div>
         <div class="service_container">
-            <div id="services_title">Select Application you want to generate Link for: <div class="apptray">
+            <div id="services_title">Select Application you want to generate Link for:
+                <div class="apptray">
                     <a class="icon instagram"><i class="fa-brands fa-instagram fa-2xl"
                             onclick="toggleContent('igContent')"></i></a>
                     <a class="icon facebook"><i class="fa-brands fa-facebook fa-2xl"
@@ -127,7 +129,11 @@ margin-bottom: 30px;
                                 <i class="fa-solid fa-code" style="color: #000000;"></i></a></div>
                     </div>
                 </div>
-
+                <div id="qr-code-section" style="display: none;">
+                    <h2 style="text-align: center;">Generated QR Code</h2>
+                    <div id="qr-code" style="align-items: center;">
+                    </div>
+                </div>
             </div>
             <div class="fb_content" id="fbContent" style="display: none;">
                 <h1 id="app_name"> Facebook Link generator</h1>
@@ -234,14 +240,9 @@ margin-bottom: 30px;
                     </div>
                 </div>
             </div>
-            <div id="qr-code-section" style="display: none;">
-                <h2 style="text-align: center;">Generated QR Code</h2>
-                <div id="qr-code" style="align-items: center;">
-                </div>
-            </div>
         </div>
     </div>
-    </div>
+
     <hr style="
 width: 90%;
 text-align: center;
