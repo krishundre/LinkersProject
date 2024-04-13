@@ -2,6 +2,7 @@ var inputElement;
 var generateBtn;
 var inputWarning;
 
+// INSTAGRAM OPTIONS STARTS FROM HERE
 function validateInput() {
     // Get the input element
     var inputElement=document.querySelector(".input");
@@ -51,44 +52,107 @@ function validateInput() {
     console.log("Buttons are open now");
   }
 
-
-  function generateLinkIG() {
-    // Get the current scroll position
-    var scrollPosition=window.scrollY;
+  function copyLink() {
+    // Get the generated link input field
+    var generatedLinkField=document.querySelector(".input");
   
+    // Get the value of the input field
+    var inputValue=generatedLinkField.value;
+  
+    // Set the generated link as the value of the input field
+    generatedLinkField.value=inputValue;
+  
+    // Select the text in the generated link input field
+    generatedLinkField.select();
+    generatedLinkField.setSelectionRange(0, 99999);
+    /* For mobile devices */
+  
+    // Copy the selected text to the clipboard
+    document.execCommand("copy");
+  
+    // Deselect the text
+    generatedLinkField.blur();
+  
+    // Log a message or perform any other actions after copying
+    console.log("Link copied to clipboard!");
+  }
+
+  function testLink() {
     // Construct the Instagram profile link
     var inputElement=document.querySelector(".input");
     var userInput=inputElement.value.trim(); // Get user input
   
     // Construct the full Instagram profile link with proper encoding
-    var generatedLink="https://www.instagram.com/"+encodeURIComponent(userInput);
+    var testLink=userInput;
   
-    // Set the generated link as the value of the input field
-    inputElement.value=generatedLink;
+    // Open the test link in a new tab
+    window.open(testLink, "_blank");
   
-    // Open the generated link in a new tab if the action is 'test'
-  
-    // Enable buttons in the button_tray
-    var buttonTray=document.getElementById("buttons_holder");
-    buttonTray.classList.remove("disabled-buttons");
-  
-    // Restore the scroll position after the link is generated
-    window.scrollTo(0, scrollPosition);
-  
-    // Enable the copy link button
-    var copyLink=document.getElementById("copyLink");
-    copyLink.disabled=false;
-  
-    // Additional logic for generating the link goes here
+    // Additional logic for testing the link goes here
     // For demonstration purposes, we'll just log a message
-    console.log("Link generated!");
-    console.log("Buttons are open now");
+    console.log("Testing link...");
   }
+
+  function generateQRCode() {
+    // Get the input field value
+    var generatedLinkField=document.querySelector(".input");
   
+    // Check if the input value is not empty
+    if (generatedLinkField !==""&& count==1) {
+      console.log(generatedLinkField.value)
+      // Create a QR code with the input value
+      var qrCode=new QRCode(document.getElementById("qr-code"), {
+          text: generatedLinkField.value,
+          width: 200,
+          height: 200,
+        }
   
+      );
+      count++;
+      console.log("qr generated");
   
-  // var userInput="";
+      // Show the QR code section
+      document.getElementById("qr-code-section").style.display="block";
+    }
   
+    else {
+      alert("QR code already generated.");
+    }
+  
+  }
+
+  function anchorcode() {
+    // Get the generated link input field
+    var generatedLinkField=document.querySelector(".input");
+  
+    // Get the value of the input field
+    var inputValue=generatedLinkField.value;
+  
+    // Construct the anchor tag code
+    var codeforweb="<a href=\""+inputValue+"\" title=\"Instagram\">Click to visit us on Instagram</a>  // This code was generated on Linkers' Project. Visit us for more";
+  
+    // Create a temporary textarea to copy the code
+    var tempTextarea=document.createElement("textarea");
+    tempTextarea.value=codeforweb;
+    document.body.appendChild(tempTextarea);
+  
+    // Select the text in the textarea
+    tempTextarea.select();
+    tempTextarea.setSelectionRange(0, 99999);
+    /* For mobile devices */
+  
+    // Copy the selected text to the clipboard
+    document.execCommand("copy");
+  
+    // Remove the temporary textarea
+    document.body.removeChild(tempTextarea);
+  
+    // Log a message or perform any other actions after copying
+    console.log("Link code copied to clipboard!");
+  } 
+// INSTAGRAM OPTIONS ENDS FROM HERE
+
+// Facebook OPTIONS STARTS FROM HERE
   function validateInputFB() {
     // Get the input element
     var inputElement=document.querySelector(".inputFB");
@@ -108,8 +172,7 @@ function validateInput() {
   
   
   }
-  
-  
+    
   function generateLinkFB() {
     // Get the current scroll position
     var scrollPosition=window.scrollY;
@@ -146,6 +209,109 @@ function validateInput() {
   }
   
   
+  
+  function testLinkFB() {
+    // Construct the Instagram profile link
+    var inputElement=document.querySelector(".inputFB");
+    var userInput=inputElement.value.trim(); // Get user input
+  
+    // Construct the full Instagram profile link with proper encoding
+    var testLink=userInput;
+  
+    // Open the test link in a new tab
+    window.open(testLink, "_blank");
+  
+    // Additional logic for testing the link goes here
+    // For demonstration purposes, we'll just log a message
+    console.log("Testing link...");
+  }
+  
+  function copyLinkFB() {
+    // Get the generated link input field
+    var generatedLinkField=document.querySelector(".inputFB");
+  
+    // Get the value of the input field
+    var inputValue=generatedLinkField.value;
+  
+    // Set the generated link as the value of the input field
+    generatedLinkField.value=inputValue;
+  
+    // Select the text in the generated link input field
+    generatedLinkField.select();
+    generatedLinkField.setSelectionRange(0, 99999);
+    /* For mobile devices */
+  
+    // Copy the selected text to the clipboard
+    document.execCommand("copy");
+  
+    // Deselect the text
+    generatedLinkField.blur();
+  
+    // Log a message or perform any other actions after copying
+    console.log("Link copied to clipboard!");
+  }
+
+  function generateQRCodeFB() {
+    // Get the input field value
+    var generatedLinkField=document.querySelector(".inputFB");
+  
+    // Check if the input value is not empty
+    if (generatedLinkField !==""&& count==1) {
+      console.log(generatedLinkField.value)
+      // Create a QR code with the input value
+      var qrCode=new QRCode(document.getElementById("qr-codeFB"), {
+          text: generatedLinkField.value,
+          width: 200,
+          height: 200,
+        }
+  
+      );
+      count++;
+      console.log("qr generated");
+  
+      // Show the QR code section
+      document.getElementById("qr-code-sectionFB").style.display="block";
+    }
+  
+    else {
+      alert("QR code already generated.");
+    }
+  
+  }
+
+  function anchorcodeFB() {
+    // Get the generated link input field
+    var generatedLinkField=document.querySelector(".inputFB");
+  
+    // Get the value of the input field
+    var inputValue=generatedLinkField.value;
+  
+    // Construct the anchor tag code
+    var codeforweb="<a href=\""+inputValue+"\" title=\"Facebook\">Click to visit us on Facebook</a>  // This code was generated on Linkers' Project. Visit us for more";
+  
+    // Create a temporary textarea to copy the code
+    var tempTextarea=document.createElement("textarea");
+    tempTextarea.value=codeforweb;
+    document.body.appendChild(tempTextarea);
+  
+    // Select the text in the textarea
+    tempTextarea.select();
+    tempTextarea.setSelectionRange(0, 99999);
+    /* For mobile devices */
+  
+    // Copy the selected text to the clipboard
+    document.execCommand("copy");
+  
+    // Remove the temporary textarea
+    document.body.removeChild(tempTextarea);
+  
+    // Log a message or perform any other actions after copying
+    console.log("Link code copied to clipboard!");
+  } 
+// Facebook OPTIONS ENDS FROM HERE
+
+
+
   function validateInputLK() {
     // Get the input element
     var inputElement=document.querySelector(".inputLK");
@@ -202,46 +368,6 @@ function validateInput() {
     console.log(generatedLink);
   }
   
-  function testLink() {
-    // Construct the Instagram profile link
-    var inputElement=document.querySelector(".input");
-    var userInput=inputElement.value.trim(); // Get user input
-  
-    // Construct the full Instagram profile link with proper encoding
-    var testLink=userInput;
-  
-    // Open the test link in a new tab
-    window.open(testLink, "_blank");
-  
-    // Additional logic for testing the link goes here
-    // For demonstration purposes, we'll just log a message
-    console.log("Testing link...");
-  }
-  
-  function copyLink() {
-    // Get the generated link input field
-    var generatedLinkField=document.querySelector(".input");
-  
-    // Get the value of the input field
-    var inputValue=generatedLinkField.value;
-  
-    // Set the generated link as the value of the input field
-    generatedLinkField.value=inputValue;
-  
-    // Select the text in the generated link input field
-    generatedLinkField.select();
-    generatedLinkField.setSelectionRange(0, 99999);
-    /* For mobile devices */
-  
-    // Copy the selected text to the clipboard
-    document.execCommand("copy");
-  
-    // Deselect the text
-    generatedLinkField.blur();
-  
-    // Log a message or perform any other actions after copying
-    console.log("Link copied to clipboard!");
-  }
   
   function testLinkFB() {
     // Construct the Instagram profile link
@@ -327,60 +453,6 @@ function validateInput() {
   
   var count=1;
   
-  function generateQRCode() {
-    // Get the input field value
-    var generatedLinkField=document.querySelector(".input");
   
-    // Check if the input value is not empty
-    if (generatedLinkField !==""&& count==1) {
-      console.log(generatedLinkField.value)
-      // Create a QR code with the input value
-      var qrCode=new QRCode(document.getElementById("qr-code"), {
-          text: generatedLinkField.value,
-          width: 200,
-          height: 200,
-        }
   
-      );
-      count++;
-      console.log("qr generated");
   
-      // Show the QR code section
-      document.getElementById("qr-code-section").style.display="block";
-    }
-  
-    else {
-      alert("QR code already generated.");
-    }
-  
-  }
-  
-  function anchorcode() {
-    // Get the generated link input field
-    var generatedLinkField=document.querySelector(".input");
-  
-    // Get the value of the input field
-    var inputValue=generatedLinkField.value;
-  
-    // Construct the anchor tag code
-    var codeforweb="<a href=\""+inputValue+"\" title=\"Instagram\">Click to visit us on Instagram</a>  // This code was generated on Linkers' Project. Visit us for more";
-  
-    // Create a temporary textarea to copy the code
-    var tempTextarea=document.createElement("textarea");
-    tempTextarea.value=codeforweb;
-    document.body.appendChild(tempTextarea);
-  
-    // Select the text in the textarea
-    tempTextarea.select();
-    tempTextarea.setSelectionRange(0, 99999);
-    /* For mobile devices */
-  
-    // Copy the selected text to the clipboard
-    document.execCommand("copy");
-  
-    // Remove the temporary textarea
-    document.body.removeChild(tempTextarea);
-  
-    // Log a message or perform any other actions after copying
-    console.log("Link code copied to clipboard!");
-  }

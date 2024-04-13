@@ -17,8 +17,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Inspiration&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="magicslideshow-trial/magicslideshow/magicslideshow.css">
-    <script src="magicslideshow-trial/magicslideshow/magicslideshow.js"></script>
     <script src="https://kit.fontawesome.com/e3cd0ae3b1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/home.css" />
@@ -48,7 +46,7 @@
     </style>
 
     <div class="navbar" style="z-index: 10;">
-        <div class=""><a href="#home" style="padding: 0%;">
+        <div id="logo"><a href="" onclick="showScrollTopButton()" style="padding: 0%;">
                 <img src="Linkers' Logo Final.png" alt="Linkers' Project Logo" srcset=""
                     style="width: 224px; height: 48px;">
             </a></div>
@@ -150,13 +148,18 @@ margin-bottom: 30px;
                             &nbsp;
                             <i class="fa-solid fa-copy" style="color: #000000;"></i>
                         </a>
-                        <a class="btn red" id="generateQRCodeFB" disabled onclick="generateQRCode()">View QR Code
+                        <a class="btn red" id="generateQRCodeFB" disabled onclick="generateQRCodeFB()">View QR Code
                             &nbsp;
                             <i class="fa-solid fa-qrcode" style="color: #000000;"></i>
                         </a>
-                        <a class="btn purple" id="anchorTagsFB" disabled onclick="anchorcode()">Anchor Tags &nbsp;
+                        <a class="btn purple" id="anchorTagsFB" disabled onclick="anchorcodeFB()">Anchor Tags &nbsp;
                             <i class="fa-solid fa-code" style="color: #000000;"></i>
                         </a>
+                    </div>
+                </div>
+                <div id="qr-code-sectionFB" style="display: none;">
+                    <h2 style="text-align: center;">Generated QR Code</h2>
+                    <div id="qr-codeFB" style="align-items: center;">
                     </div>
                 </div>
             </div>
@@ -303,8 +306,9 @@ text-align: center;
 margin-top: 50px;
 margin-bottom: 30px;
 " />
+    <div class="title_sec">Contact us</div>
     <div class="contact" id="contact">
-        <div class="title_sec">Contact us</div>
+
         <div class="parent">
             <div class="div1"><img src="Images/contact_form.svg" alt="Contact Form" srcset=""></div>
             <div class="div2">

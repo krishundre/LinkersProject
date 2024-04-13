@@ -290,6 +290,7 @@
   cursor: not-allowed;
 }
 
-#qr-code {
+#qr-code,
+#qr-codeFB {
   margin-left: 39%;
 }
