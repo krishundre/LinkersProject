@@ -1,3 +1,5 @@
+
+
 var inputElement;
 var generateBtn;
 var inputWarning;
@@ -93,6 +95,7 @@ function validateInput() {
     console.log("Testing link...");
   }
 
+  var count=1;
   function generateQRCode() {
     // Get the input field value
     var generatedLinkField=document.querySelector(".input");
@@ -268,7 +271,7 @@ function validateInput() {
         }
   
       );
-      count++;
+      countFB++;
       console.log("qr generated");
   
       // Show the QR code section
@@ -551,14 +554,14 @@ function copyLinkWA() {
   console.log("Link copied to clipboard!");
 }
 
-
+countWA=1;
 
 function generateQRCodeWA() {
   // Get the input field value
   var generatedLinkField=document.querySelector(".inputWA");
 
   // Check if the input value is not empty
-  if (generatedLinkField !==""&& count==1) {
+  if (generatedLinkField !==""&& countWA==1) {
     console.log(generatedLinkField.value)
     // Create a QR code with the input value
     var qrCode=new QRCode(document.getElementById("qr-codeWA"), {
@@ -568,7 +571,7 @@ function generateQRCodeWA() {
       }
 
     );
-    count++;
+    countWA++;
     console.log("qr generated");
 
     // Show the QR code section
