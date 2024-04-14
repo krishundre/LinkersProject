@@ -312,6 +312,260 @@ function validateInput() {
 
 
 
+// Email OPTIONS START FROM HERE
+function validateInputEM() {
+  // Get the input element
+  var inputElement=document.querySelector(".inputEM");
+
+  // Get the generate button
+  var generateBtnEM=document.getElementById("generateBtnEM");
+
+  var inputWarning=document.getElementById("input_warningEM");
+
+  // Show or hide the warning message based on input presence
+  inputWarning.style.display=inputElement.value.trim()===""? "block": "none";
+
+  // Enable the generate button if the input has data, otherwise disable it
+  generateBtnEM.disabled=inputElement.value.trim()==="";
+
+  console.log("Checking Input");
+}
+
+function generateLinkEM() {
+
+  var inputElement=document.querySelector(".inputEM");
+  var userInput=inputElement.value.trim(); // Get user input
+
+  // Construct the full Instagram profile link with proper encoding
+  var generatedLink="https://mailto:"+encodeURIComponent(userInput);
+  console.log(generatedLink); 
+  // Set the generated link as the value of the input field
+  inputElement.value=generatedLink;
+
+  // Open the generated link in a new tab if the action is 'test'
+
+  // Enable buttons in the button_tray
+  var buttonTray=document.getElementById("buttons_holder");
+  buttonTray.classList.remove("disabled-buttons");
+
+  // Restore the scroll position after the link is generated
+  window.scrollTo(0, scrollPosition);
+
+  // Enable the copy link button
+  var copyLink=document.getElementById("copyLink");
+  copyLink.disabled=false;
+
+  // Additional logic for generating the link goes here
+  // For demonstration purposes, we'll just log a message
+  console.log("Link generated!");
+  console.log("Buttons are open now");
+}
+
+// Email OPTIONS END FROM HERE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Whatsapp OPTIONS START FROM HERE
+function validateInputWA() {
+  var inputElement = document.querySelector(".inputWA");
+  var generateBtn = document.getElementById("generateBtnWA");
+  var inputWarning = document.getElementById("input_warningWA");
+
+  inputWarning.style.display = inputElement.value.trim() === "" ? "block" : "none";
+  generateBtn.disabled = inputElement.value.trim() === "";
+}
+
+function generateLinkWA() {
+  var inputElement = document.querySelector(".inputWA");
+  var inputElementtext = document.querySelector(".inputWA_text");
+  var userInput = inputElement.value.trim();
+  var userInput_text = inputElementtext.value.trim();
+  var generatedLink = "https://api.whatsapp.com/send?phone=" + userInput + "&text=" + encodeURIComponent(userInput_text);
+
+  inputElement.value = generatedLink;
+
+  var buttonTray = document.getElementById("buttons_holderWA");
+  buttonTray.classList.remove("disabled-buttonsWA");
+
+  window.scrollTo(0, scrollPosition);
+
+  var copyLink = document.getElementById("copyLink");
+  copyLink.disabled = false;
+
+  console.log("Link generated!");
+}
+
+function testLinkWA() {
+  // Construct the Instagram profile link
+  var inputElement=document.querySelector(".inputWA");
+  var userInput=inputElement.value.trim(); // Get user input
+
+  // Construct the full Instagram profile link with proper encoding
+  var testLink=userInput;
+
+  // Open the test link in a new tab
+  window.open(testLink, "_blank");
+
+  // Additional logic for testing the link goes here
+  // For demonstration purposes, we'll just log a message
+  console.log("Testing link...");
+}
+
+function copyLinkWA() {
+  // Get the generated link input field
+  var generatedLinkField=document.querySelector(".inputWA");
+
+  // Get the value of the input field
+  var inputValue=generatedLinkField.value;
+
+  // Set the generated link as the value of the input field
+  generatedLinkField.value=inputValue;
+
+  // Select the text in the generated link input field
+  generatedLinkField.select();
+  generatedLinkField.setSelectionRange(0, 99999);
+  /* For mobile devices */
+
+  // Copy the selected text to the clipboard
+  document.execCommand("copy");
+
+  // Deselect the text
+  generatedLinkField.blur();
+
+  // Log a message or perform any other actions after copying
+  console.log("Link copied to clipboard!");
+}
+
+
+
+function generateQRCodeWA() {
+  // Get the input field value
+  var generatedLinkField=document.querySelector(".inputWA");
+
+  // Check if the input value is not empty
+  if (generatedLinkField !==""&& count==1) {
+    console.log(generatedLinkField.value)
+    // Create a QR code with the input value
+    var qrCode=new QRCode(document.getElementById("qr-codeWA"), {
+        text: generatedLinkField.value,
+        width: 200,
+        height: 200,
+      }
+
+    );
+    count++;
+    console.log("qr generated");
+
+    // Show the QR code section
+    document.getElementById("qr-code-sectionWA").style.display="block";
+  }
+
+  else {
+    alert("QR code already generated.");
+  }
+
+}
+
+function anchorcode() {
+  // Get the generated link input field
+  var generatedLinkField=document.querySelector(".inputWA");
+
+  // Get the value of the input field
+  var inputValue=generatedLinkField.value;
+
+  // Construct the anchor tag code
+  var codeforweb="<a href=\""+inputValue+"\" title=\"Whatsapp\">Click to chat on Whatsapp</a>  // This code was generated on Linkers' Project. Visit us for more";
+
+  // Create a temporary textarea to copy the code
+  var tempTextarea=document.createElement("textarea");
+  tempTextarea.value=codeforweb;
+  document.body.appendChild(tempTextarea);
+
+  // Select the text in the textarea
+  tempTextarea.select();
+  tempTextarea.setSelectionRange(0, 99999);
+  /* For mobile devices */
+
+  // Copy the selected text to the clipboard
+  document.execCommand("copy");
+
+  // Remove the temporary textarea
+  document.body.removeChild(tempTextarea);
+
+  // Log a message or perform any other actions after copying
+  console.log("Link code copied to clipboard!");
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Linkedin OPTIONS START FROM HERE
   function validateInputLK() {
     // Get the input element
     var inputElement=document.querySelector(".inputLK");
@@ -366,48 +620,6 @@ function validateInput() {
     console.log("Link generated!");
     console.log("Buttons are open now");
     console.log(generatedLink);
-  }
-  
-  
-  function testLinkFB() {
-    // Construct the Instagram profile link
-    var inputElement=document.querySelector(".inputFB");
-    var userInput=inputElement.value.trim(); // Get user input
-  
-    // Construct the full Instagram profile link with proper encoding
-    var testLink=userInput;
-  
-    // Open the test link in a new tab
-    window.open(testLink, "_blank");
-  
-    // Additional logic for testing the link goes here
-    // For demonstration purposes, we'll just log a message
-    console.log("Testing link...");
-  }
-  
-  function copyLinkFB() {
-    // Get the generated link input field
-    var generatedLinkField=document.querySelector(".inputFB");
-  
-    // Get the value of the input field
-    var inputValue=generatedLinkField.value;
-  
-    // Set the generated link as the value of the input field
-    generatedLinkField.value=inputValue;
-  
-    // Select the text in the generated link input field
-    generatedLinkField.select();
-    generatedLinkField.setSelectionRange(0, 99999);
-    /* For mobile devices */
-  
-    // Copy the selected text to the clipboard
-    document.execCommand("copy");
-  
-    // Deselect the text
-    generatedLinkField.blur();
-  
-    // Log a message or perform any other actions after copying
-    console.log("Link copied to clipboard!");
   }
   
   function testLinkLK() {

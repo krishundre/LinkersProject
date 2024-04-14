@@ -166,19 +166,18 @@ margin-bottom: 30px;
 
             <div class="email_content" id="emailContent" style="display: none;">
                 <h1 id="app_name"> Email Link generator</h1>
-                <input type="email" placeholder="Enter Receipent's Email ID" name="email_id" class="input"
+                <input type="email" placeholder="Enter Receipent's Email ID" name="email_id" class="inputEM"
+                    oninput="validateInputEM()" />
+                <input type="text" placeholder="Enter Subject (optional)" name="email_subject" class="inputEM_subj"
                     oninput="validateInput()" />
-                <h3 id="input_warning" style="display: block;">Please enter input to activate below button</h3>
-                <input type="text" placeholder="Enter Subject (optional)" name="email_subject" class="input"
+                <input type="email" placeholder="CC (optional)" name="email_cc" class="inputEM_cc"
                     oninput="validateInput()" />
-                <input type="email" placeholder="CC (optional)" name="email_cc" class="input"
+                <input type="email" placeholder="BCC (optional)" name="email_bcc" class="inputEM_bcc"
                     oninput="validateInput()" />
-                <input type="email" placeholder="BCC (optional)" name="email_bcc" class="input"
-                    oninput="validateInput()" />
-                <input type="text" placeholder="Body (optional)" name="email_body" class="input" style="height: 100px;"
-                    oninput="validateInput()" />
-
-                <div class="buttons_holder"><button class="btn2" id="generateBtn" onclick="generateLink()"
+                <input type="text" placeholder="Body (optional)" name="email_body" class="inputEM_body"
+                    style="height: 100px;" oninput="validateInput()" />
+                <h3 id="input_warningEM" style="display: block;">Please enter input to activate below button</h3>
+                <div class="buttons_holder"><button class="btn2" id="generateBtn" onclick="generateLinkEM()"
                         disabled>Generate
                         Link </button>
                     <div id="button_tray">
@@ -192,33 +191,48 @@ margin-bottom: 30px;
                                 <i class="fa-solid fa-qrcode" style="color: #000000;"></i></a><a href="#"
                                 class="btn purple" id="anchorTags" disabled>Anchor Tags &nbsp;
                                 <i class="fa-solid fa-code" style="color: #000000;"></i></a></div>
+                    </div>
+                </div>
+                <div id="qr-code-section" style="display: none;">
+                    <h2 style="text-align: center;">Generated QR Code</h2>
+                    <div id="qr-code" style="align-items: center;">
                     </div>
                 </div>
             </div>
             <div class="wa_content" id="waContent" style="display: none;">
-                <h1 id="app_name"> WhatsApp Link generator</h1>
-                <input type="number" placeholder="Enter Phone Number" name="wa_phone" class="input"
-                    oninput="validateInput()" />
-                <h3 id="input_warning" style="display: block;">Please enter input to activate below button</h3>
-                <input type="text" placeholder="Enter Message you want to be sent" name="wa_phone" class="input"
-                    oninput="validateInput()" />
-                <div class="buttons_holder"><button class="btn2" id="generateBtn" onclick="generateLink()"
-                        disabled>Generate
-                        Link </button>
+                <h1 id="app_name">WhatsApp Link generator</h1>
+                <input type="tel" placeholder="Enter Phone Number" name="wa_phone" class="inputWA"
+                    oninput="validateInputWA()" />
+                <h3 id="input_warningWA" style="display: block;">Please enter input to activate below button</h3>
+                <input type="text" placeholder="Enter Message you want to be sent" name="wa_message"
+                    class="inputWA_text" oninput="validateInputWA()" />
+                <div class="buttons_holderWA">
+                    <button class="btn2" id="generateBtnWA" onclick="generateLinkWA()" disabled>Generate Link</button>
                     <div id="button_tray">
-                        <div id="buttons_holder" class="disabled-buttons"><a href="#" class="btn blue" id="testLink"
-                                onclick="testLink()" disabled>Test Link &nbsp;
-                                <i class="fa-solid fa-arrow-up-right-from-square" style="color: #000000;"></i></a><a
-                                href="#" class="btn green" id="copyLink" onclick="copyLink()" disabled>Copy Link
+                        <div id="buttons_holderWA" class="disabled-buttonsWA">
+                            <a class="btn blue" id="testLink" onclick="testLinkWA()" disabled>Test Link &nbsp;
+                                <i class="fa-solid fa-arrow-up-right-from-square" style="color: #000000;"></i>
+                            </a>
+                            <a class="btn green" id="copyLink" onclick="copyLinkWA()" disabled>Copy Link &nbsp;
+                                <i class="fa-solid fa-copy" style="color: #000000;"></i>
+                            </a>
+                            <a class="btn red" id="generateQRCode" disabled onclick="generateQRCodeWA()">View QR
+                                Code &nbsp;
+                                <i class="fa-solid fa-qrcode" style="color: #000000;"></i>
+                            </a>
+                            <a class="btn purple" id="anchorTags" disabled onclick="anchorcode()">Anchor Tags
                                 &nbsp;
-                                <i class="fa-solid fa-copy" style="color: #000000;"></i></a><a href="#" class="btn red"
-                                id="viewQRCode" disabled>View QR Code &nbsp;
-                                <i class="fa-solid fa-qrcode" style="color: #000000;"></i></a><a href="#"
-                                class="btn purple" id="anchorTags" disabled>Anchor Tags &nbsp;
-                                <i class="fa-solid fa-code" style="color: #000000;"></i></a></div>
+                                <i class="fa-solid fa-code" style="color: #000000;"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
+                <div id="qr-code-sectionWA" style="display: none;">
+                    <h2 style="text-align: center;">Generated QR Code</h2>
+                    <div id="qr-codeWA" style="align-items: center;"></div>
+                </div>
             </div>
+
             <div class="lk_content" id="lkContent" style="display: none;">
                 <h1 id="app_name"> Linkedin Link generator</h1>
                 <input type="text" placeholder="Enter link URL you want to share as post" name="text" class="inputLK"
