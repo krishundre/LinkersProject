@@ -300,6 +300,7 @@
 .disabled-buttons a,
 .disabled-buttonsFB a,
 .disabled-buttonsLK a,
+.disabled-buttonsEM a,
 .disabled-buttonsWA a {
   pointer-events: none;
   opacity: 0.5;
@@ -308,6 +309,8 @@
 
 #qr-code,
 #qr-codeFB,
-#qr-codeWA {
+#qr-codeWA,
+#qr-codeEM,
+#qr-codeLK {
   margin-left: 39%;
 }

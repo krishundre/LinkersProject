@@ -46,7 +46,7 @@
     </style>
 
     <div class="navbar" style="z-index: 10;">
-        <div id="logo"><a href="" onclick="showScrollTopButton()" style="padding: 0%;">
+        <div id="logo"><a href="#" style="padding: 0%;">
                 <img src="Linkers' Logo Final.png" alt="Linkers' Project Logo" srcset=""
                     style="width: 224px; height: 48px;">
             </a></div>
@@ -177,34 +177,35 @@ margin-bottom: 30px;
                 <input type="text" placeholder="Body (optional)" name="email_body" class="inputEM_body"
                     style="height: 100px;" oninput="validateInput()" />
                 <h3 id="input_warningEM" style="display: block;">Please enter input to activate below button</h3>
-                <div class="buttons_holder"><button class="btn2" id="generateBtn" onclick="generateLinkEM()"
+                <div class="buttons_holder"><button class="btn2" id="generateBtnEM" onclick="generateLinkEM()"
                         disabled>Generate
                         Link </button>
                     <div id="button_tray">
-                        <div id="buttons_holder" class="disabled-buttons"><a href="#" class="btn blue" id="testLink"
-                                onclick="testLink()" disabled>Test Link &nbsp;
-                                <i class="fa-solid fa-arrow-up-right-from-square" style="color: #000000;"></i></a><a
-                                href="#" class="btn green" id="copyLink" onclick="copyLink()" disabled>Copy Link
-                                &nbsp;
-                                <i class="fa-solid fa-copy" style="color: #000000;"></i></a><a href="#" class="btn red"
-                                id="viewQRCode" disabled>View QR Code &nbsp;
-                                <i class="fa-solid fa-qrcode" style="color: #000000;"></i></a><a href="#"
-                                class="btn purple" id="anchorTags" disabled>Anchor Tags &nbsp;
-                                <i class="fa-solid fa-code" style="color: #000000;"></i></a></div>
+                        <div id="buttons_holderEM" class="disabled-buttonsEM">
+                            <a class="btn blue" id="testLink" onclick="testLinkEM()" disabled>Test Link &nbsp;
+                                <i class="fa-solid fa-arrow-up-right-from-square" style="color: #000000;"></i>
+                            </a>
+                            <a class="btn green" id="copyLink" onclick="copyLinkEM()" disabled>Copy Link &nbsp;
+                                <i class="fa-solid fa-copy" style="color: #000000;"></i></a><a class="btn red"
+                                onclick="generateQRCodeEM()" id="viewQRCode" disabled>View QR Code &nbsp;
+                                <i class="fa-solid fa-qrcode" style="color: #000000;"></i></a><a class="btn purple"
+                                onclick="anchorcodeEM()" id="anchorTags" disabled>Anchor Tags &nbsp;
+                                <i class="fa-solid fa-code" style="color: #000000;"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div id="qr-code-section" style="display: none;">
+                <div id="qr-code-sectionEM" style="display: none;">
                     <h2 style="text-align: center;">Generated QR Code</h2>
-                    <div id="qr-code" style="align-items: center;">
+                    <div id="qr-codeEM" style="align-items: center;">
                     </div>
                 </div>
             </div>
             <div class="wa_content" id="waContent" style="display: none;">
                 <h1 id="app_name">WhatsApp Link generator</h1>
-                <input type="tel" placeholder="Enter Phone Number" name="wa_phone" class="inputWA"
-                    oninput="validateInputWA()" />
+                <input type="tel" placeholder="Enter Phone Number E.g. 91 for the India, 1 for the US." name="wa_phone"
+                    class="inputWA" oninput="validateInputWA()" />
                 <h3 id="input_warningWA" style="display: block;">Please enter input to activate below button</h3>
-                <input type="text" placeholder="Enter Message you want to be sent" name="wa_message"
+                <input type="text" placeholder="Enter Message you want to be send" name="wa_message"
                     class="inputWA_text" oninput="validateInputWA()" />
                 <div class="buttons_holderWA">
                     <button class="btn2" id="generateBtnWA" onclick="generateLinkWA()" disabled>Generate Link</button>
@@ -220,7 +221,7 @@ margin-bottom: 30px;
                                 Code &nbsp;
                                 <i class="fa-solid fa-qrcode" style="color: #000000;"></i>
                             </a>
-                            <a class="btn purple" id="anchorTags" disabled onclick="anchorcode()">Anchor Tags
+                            <a class="btn purple" id="anchorTags" disabled onclick="anchorcodeWA()">Anchor Tags
                                 &nbsp;
                                 <i class="fa-solid fa-code" style="color: #000000;"></i>
                             </a>
@@ -249,11 +250,16 @@ margin-bottom: 30px;
                             <a class="btn green" id="copyLink" onclick="copyLinkLK()" disabled>Copy Link
                                 &nbsp;
                                 <i class="fa-solid fa-copy" style="color: #000000;"></i>
-                            </a><a class="btn red" id="viewQRCode" disabled>View QR Code &nbsp;
-                                <i class="fa-solid fa-qrcode" style="color: #000000;"></i></a><a class="btn purple"
-                                id="anchorTags" disabled>Anchor Tags &nbsp;
+                            </a><a class="btn red" id="viewQRCode" onclick="generateQRCodeLK()" disabled>View QR Code
+                                &nbsp;
+                                <i class="fa-solid fa-qrcode" style="color: #000000;"></i></a>
+                            <a class="btn purple" id="anchorTags" onclick="anchorcodeLK()" disabled>Anchor Tags &nbsp;
                                 <i class="fa-solid fa-code" style="color: #000000;"></i></a>
                         </div>
+                    </div>
+                    <div id="qr-code-sectionLK" style="display: none;">
+                        <h2 style="text-align: center;">Generated QR Code</h2>
+                        <div id="qr-codeLK" style="align-items: center;"></div>
                     </div>
                 </div>
             </div>
