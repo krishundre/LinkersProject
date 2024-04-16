@@ -498,7 +498,7 @@ function generateLinkWA() {
   var inputElementtext = document.querySelector(".inputWA_text");
   var userInput = inputElement.value.trim();
   var userInput_text = inputElementtext.value.trim();
-  var generatedLink = "https://api.whatsapp.com/send?phone=" + userInput + "&text=" + encodeURIComponent(userInput_text);
+  var generatedLink = "https://wa.me/" + userInput + "?&text=" + encodeURIComponent(userInput_text);
 
   inputElement.value = generatedLink;
 
