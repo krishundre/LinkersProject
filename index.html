@@ -42,13 +42,44 @@
             margin: 0px;
             background: linear-gradient(180deg, #304352 0%, #d7d2cc 70.07%);
             height: auto;
+
+
+        }
+
+        /* For WebKit browsers (Chrome, Safari, Opera) */
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: #2c2c2c;
+            /* Dark grey track */
+            /* border-radius: 10px; */
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: #555;
+            /* Grey thumb */
+            border-radius: 10px;
+            transition: background 0.3s ease-in-out;
+            /* Smooth transition for hover effect */
+        }
+
+        body::-webkit-scrollbar-thumb:hover {
+            background: #888;
+            /* Lighter grey thumb on hover */
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
     <nav class="navbar navbar-expand-lg bg-black fixed-top top=0 w-100" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="Linkers' Logo Final.png" alt="Linkers' Project Logo" srcset=""
-                    style="width: 224px; height: 48px;">
+                    style="width: 224px; height: 36px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
