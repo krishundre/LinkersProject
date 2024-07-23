@@ -1,8 +1,13 @@
 .home {
-    font-family: 'Rowdies', cursive;
-    margin: 17px 20px 15px 17px;
+    font-family: 'Rowdies' !important;
     font-weight: 400;
+    color: white;
     line-height: normal;
+}
+
+.title a {
+    /* text-decoration: none; */
+    color: #000;
 }
 
 .title_sec {
@@ -17,51 +22,11 @@
     letter-spacing: 0.57px;
 }
 
-.home_part_1 {
-    width: 400px;
-    height: 612.465px;
-    flex-shrink: 0;
-    background: rgba(255, 255, 255, 0.10);
-    /* filter: blur(2px); */
+.gen_link_btn {
+    border: 2px solid #000 !important;
+    background: #FFF614 !important;
+    font-size: 39px;
 
-}
-
-.home_grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
-
-.home_part_1 {
-    grid-area: 1 / 1 / 4 / 2;
-    margin-left: 160px;
-}
-
-.home_part_2 {
-    grid-area: 1 / 2 / 2 / 3;
-    font-size: 24px;
-    margin-top: 40px;
-    margin-right: 120px;
-    color: white;
-}
-
-.title {
-    color: #000000;
-}
-
-.title a {
-    text-decoration: none;
-    color: #000;
-}
-
-.home_part_3 {
-    grid-area: 2 / 2 / 3 / 3;
-    font-size: 22px;
-    margin-top: 20px;
-    /* margin-right: 120px; */
-    color: white;
 }
 
 .home_part_4 {
@@ -70,8 +35,8 @@
     height: 70px;
     flex-shrink: 0;
     border-radius: 50px;
-    border: 2px solid #000;
-    background: #FFF614;
+    border: 2px solid #000 !important;
+    background: #FFF614 !important;
     color: #000;
     text-align: center;
     font-family: Rowdies;
