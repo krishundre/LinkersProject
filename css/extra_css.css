@@ -31,7 +31,7 @@
 
 @media (max-width: 576px) {
     .logo {
-        width: 410em !important;
+        width: 10em !important;
         padding: 0px !important;
         margin: 0px !important;
     }
