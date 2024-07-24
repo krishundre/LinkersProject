@@ -1,6 +1,14 @@
+/* Other CSS classes */
+
 @media (max-width: 576px) {
-    .fs_on_mobile {
+    .fs_on_mobile.fs-2 {
+        font-size: 0.8rem !important;
+        /* Ensure it overrides other styles */
+    }
+
+    .fs_on_mobile.fs-4,
+    .fs_on_mobile.fs-3 {
         font-size: 0.5rem !important;
-        /* Adjust the size for mobile */
+        /* Ensure it overrides other styles */
     }
 }
