@@ -47,7 +47,16 @@
         /* Ensure it overrides other styles */
     }
 
+    .fs_on_mobile.fs-5 {
+        font-size: 0.4rem !important;
+        /* Ensure it overrides other styles */
+    }
+
     .scroll_up img {
         width: 1em;
+    }
+
+    .padding_on_mobile {
+        padding: 0px;
     }
 }
