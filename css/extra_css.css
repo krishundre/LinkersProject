@@ -1,0 +1,53 @@
+/* Other CSS classes */
+#scrollTopBtn {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.5s ease;
+    /* Added transition for opacity */
+}
+
+#scrollTopBtn:hover {
+    background-color: #0056b3;
+}
+
+#scrollTopBtn.visible {
+    opacity: 1;
+    display: block;
+}
+
+.scroll_up img {
+    width: 2em;
+}
+
+@media (max-width: 576px) {
+    .logo {
+        width: 410em !important;
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+
+    .fs_on_mobile.fs-2 {
+        font-size: 0.8rem !important;
+        /* Ensure it overrides other styles */
+    }
+
+    .fs_on_mobile.fs-4,
+    .fs_on_mobile.fs-3 {
+        font-size: 0.5rem !important;
+        /* Ensure it overrides other styles */
+    }
+
+    .scroll_up img {
+        width: 1em;
+    }
+}
