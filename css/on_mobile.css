@@ -1,6 +1,10 @@
 /* Other CSS classes */
 
 @media (max-width: 576px) {
+    .logo {
+        width: 8em !important;
+    }
+
     .fs_on_mobile.fs-2 {
         font-size: 0.8rem !important;
         /* Ensure it overrides other styles */
