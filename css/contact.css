@@ -1,19 +1,17 @@
 .contact {
-   border-radius: 22px;
+   /* border-radius: 22px; */
    background: rgba(124, 124, 124, 0.622);
-   width: 1328px;
+   /* width: 1328px; */
    height: auto;
    flex-shrink: 0;
-   margin: auto;
-   margin-top: 10px;
-   padding: 20px;
+   /* margin: auto; */
+   /* margin-top: 10px; */
+   /* padding: 20px; */
    font-size: 15px;
-   margin-bottom: 10px;
+   /* margin-bottom: 10px; */
 }
 
 #heading {
-   text-align: left;
-   font-family: 'Inspiration', cursive;
    font-family: 'Noto Serif Balinese', serif;
 }
 

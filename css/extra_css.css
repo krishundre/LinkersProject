@@ -57,6 +57,10 @@
     }
 
     .padding_on_mobile {
-        padding: 0px;
+        padding: 0px !important;
+    }
+
+    .margin_on_mobile {
+        margin: 0px !important;
     }
 }
