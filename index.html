@@ -379,14 +379,14 @@ text-align: center;
 margin-top: 50px;
 margin-bottom: 30px;
 " />
-    <div class="contact rounded-5 mx-5 p-3" id="contact">
+    <div class="contact rounded-5 mx-5 mb-3 p-3 h-auto" id="contact">
         <div class="title_sec">Contact us</div>
 
-        <div class="parent">
-            <div class="div1 d-none d-sm-flex">
+        <div class="parent d-grid">
+            <div class="div1 d-none d-sm-flex align-items-center d-flex justify-content-center ">
                 <img src="Images/contact_form.svg" alt="Contact Form">
             </div>
-            <div class="div2">
+            <div class="div2 h-auto rounded">
                 <table>
                     <tr>
                         <th class="text-left" id="heading"><strong>Hello,
@@ -409,7 +409,9 @@ margin-bottom: 30px;
                         </td>
                     </tr>
                     <tr>
-                        <td><button type="button" onclick="submitForm()" id="submitBtn">Submit</button>
+                        <td>
+                            <button type="button" onclick="submitForm()" id="submitBtn"
+                                class="rounded border-none text-white">Submit</button>
                             <p id="submittedMessage" class="submitted-message"></p>
                         </td>
                     </tr>
@@ -417,42 +419,51 @@ margin-bottom: 30px;
             </div>
         </div>
         <p id="inner_title" style="text-align: center; font-size: 28px;">Other Projects</p>
-        <div id="other_projects">
-            <figure class="snip1336">
+        <div id="other_projects" class="justify-content-space-evenly d-flex">
+            <figure class="snip1336 h-100">
                 <img src="Other Projects/proj_disp5.png" alt="Personal Portfolio" />
                 <figcaption>
-                    <h2 id="project_name">Personal Portfolio Website</h2>
-                    <a href="https://krishundre.vercel.app/" target="_blank" class="follow">View Website</a>
+                    <p class="text-white fs-6" id="project_name">Personal Portfolio Website</p>
+                    <a href="https://krishundre.vercel.app/" target="_blank"
+                        class="follow text-center text-decoration-none d-inline-block text-white border border-white">View
+                        Project</a>
                 </figcaption>
             </figure>
-            <figure class="snip1336">
+            <figure class="snip1336 h-100">
                 <img src="Other Projects/proj_disp1.jpg" alt="Hello Doctor Medical Directory" />
                 <figcaption>
-                    <h2 id="project_name">Hello Doctor Medical Directory</h2>
-                    <a href="https://medical-directory.vercel.app/" target="_blank" class="follow">View Website</a>
+                    <p class="text-white fs-6" id="project_name">Hello Doctor Medical Directory</p>
+                    <a href="https://medical-directory.vercel.app/" target="_blank"
+                        class="follow text-center text-decoration-none d-inline-block text-white border border-white">View
+                        Project</a>
                 </figcaption>
             </figure>
-            <figure class="snip1336">
+            <figure class="snip1336  d-none d-sm-block h-100">
                 <img src="Other Projects/proj_disp3.jpg" alt="Terai Bazaar" />
                 <figcaption>
-                    <h2 id="project_name">Terai Bazaar</h2>
-                    <a href="https://teraibazaar.com/" target="_blank" class="follow">View Website</a>
+                    <p class="text-white fs-6" id="project_name">Terai Bazaar</p>
+                    <a href="https://teraibazaar.com/" target="_blank"
+                        class="follow text-center text-decoration-none d-inline-block text-white border border-white">View
+                        Project</a>
                 </figcaption>
             </figure>
-            <figure class="snip1336">
+            <figure class="snip1336  d-none d-sm-block h-100">
                 <img src="Other Projects/proj_disp4.jpg" alt="Boutiques of India" />
                 <figcaption>
-                    <h2 id="project_name">Boutiques of India</h2>
-                    <a href="https://www.boutiquesofindia.in/" target="_blank" class="follow">View Website</a>
+                    <p class="text-white fs-6" id="project_name">Boutiques of India</p>
+                    <a href="https://www.boutiquesofindia.in/" target="_blank"
+                        class="follow text-center text-decoration-none d-inline-block text-white border border-white">View
+                        Project</a>
                 </figcaption>
             </figure>
-            <figure class="snip1336">
+            <figure class="snip1336 d-none d-sm-block h-100">
                 <img src="Other Projects/proj_disp2.png" alt="Blog App using React"
                     style="width: 250px; height: 156px;" />
                 <figcaption>
-                    <h2 id="project_name">Blog App using React</h2>
-                    <a href="https://github.com/krishundre/Blog_App_using_React" target="_blank" class="follow">View
-                        Website</a>
+                    <p class="text-white fs-6" id="project_name">Blog App using React</p>
+                    <a href="https://github.com/krishundre/Blog_App_using_React" target="_blank"
+                        class="follow text-center text-decoration-none d-inline-block text-white border border-white">View
+                        Project</a>
                 </figcaption>
             </figure>
 
