@@ -60,13 +60,13 @@ table>input {
    border-radius: 5px;
 }
 
-button {
+#submitBtn {
    background-color: #FF5733;
    padding: 10px 20px;
    transition: background-color 0.3s ease;
 }
 
-button:hover {
+#submitBtn:hover {
    background-color: #FF774D;
    transform: scale(1.1);
 }

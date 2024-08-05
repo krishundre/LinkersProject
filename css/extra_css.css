@@ -65,6 +65,6 @@
     }
 
     .hide_on_mobile {
-        display: none;
+        display: none !important;
     }
 }

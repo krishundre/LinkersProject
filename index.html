@@ -91,7 +91,7 @@
                         Services</a>
                     <a class="nav-link" href="#"><i class="fa-solid fa-circle-info fa-xs" style="color: #ffffff"></i>
                         About Us</a>
-                    <a class="nav-link" href="#"><i class="fa-solid fa-handshake-angle fa-xs"
+                    <a class="nav-link hide_on_mobile" href="#"><i class="fa-solid fa-handshake-angle fa-xs"
                             style="color: #ffffff"></i> Help</a>
                     <a class="nav-link" href="#"><i class="fa-solid fa-address-card fa-xs" style="color: #ffffff"></i>
                         Contact us</a>
@@ -133,15 +133,16 @@
         </div>
     </div>
 
-
     <div class="scroll_up d-flex justify-content-center m-4">
         <img src=" ./Images/Scroll down animation.gif" class="" alt="Scroll Up Animation">
     </div>
+
     <div class="services" id="services">
         <div class="title_sec">Services</div>
-        <div class="service_container">
-            <div id="services_title">Select Application you want to generate Link for:
-                <div class="apptray">
+        <div class="service_container p-2 rounded-5">
+            <div id="services_title">
+                <p class="fs-2 mx-3"> Application you want to generate Link for: </p>
+                <div class="apptray1">
                     <a class="icon instagram"><i class="fa-brands fa-instagram fa-2xl"
                             onclick="toggleContent('igContent')"></i></a>
                     <a class="icon facebook"><i class="fa-brands fa-facebook fa-2xl"
@@ -155,15 +156,15 @@
                 </div>
             </div>
             <div class="select_app" id="selContent">
-                <h1>Please click on Application icon for which you want to generate link</h1>
+                <p class="fs-3">Please click on Application icon for which you want to generate link</p>
             </div>
             <div class="ig_content" id="igContent" style="display: none;">
                 <h1 id="app_name"> Instagram Link generator</h1>
                 <input type="text" placeholder="Enter IG Profile name to get Profile Link" name="text" class="input"
                     oninput="validateInput()" />
                 <h3 id="input_warning" style="display: block;">Please enter input to activate below button</h3>
-                <div class="buttons_holder"><button class="btn2" id="generateBtn" onclick="generateLinkIG()"
-                        disabled>Generate Link </button>
+                <div class="buttons_holder">
+                    <button class="btn2" id="generateBtn" onclick="generateLinkIG()" disabled>Generate Link </button>
                     <div id="button_tray">
                         <div id="buttons_holder" class="disabled-buttons"><a class="btn blue" id="testLink"
                                 onclick="testLink()" disabled>Test Link &nbsp;
@@ -357,8 +358,8 @@ text-align: center;
 margin-top: 50px;
 margin-bottom: 30px;
 " />
-    <div id="help" class="help">
-        <div class="title_sec">Help</div>
+    <div id="help" class="help hide_on_mobile">
+        <div class=" title_sec">Help</div>
         <div class="image-slideshow">
             <div id="button_for_slideshow">
                 <img class="buttons_slideshow" src="Next Icon.svg" alt="Click To see previous icon"
@@ -411,7 +412,7 @@ margin-bottom: 30px;
                     <tr>
                         <td>
                             <button type="button" onclick="submitForm()" id="submitBtn"
-                                class="rounded border-none text-white">Submit</button>
+                                class="rounded border-none text-white ">Submit</button>
                             <p id="submittedMessage" class="submitted-message"></p>
                         </td>
                     </tr>

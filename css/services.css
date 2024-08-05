@@ -1,34 +1,31 @@
 .service_container {
   border-radius: 77px;
   background: rgba(217, 217, 217, 0.50);
-  width: 1330px;
+  width: 90%;
+  max-width: 1330px;
   min-height: 600px;
   height: auto;
-  min-height: 600px;
   padding-bottom: 20px;
   flex-shrink: 0;
   margin: auto;
-  /* display: flex;
-    justify-content: center; */
   margin-top: 10px;
 }
 
 #services_title {
   color: #000;
   font-family: Roboto Condensed;
-  font-size: 38px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  font-size: 3em;
+
   margin-top: 20px;
-  /* height: 56px; */
   text-align: center;
 }
 
-.apptray {
+.apptray1 {
   display: flex;
-  justify-content: space-between;
-  width: 818px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 818px;
   margin: 30px auto 10px auto;
 }
 
@@ -38,16 +35,14 @@
   vertical-align: -0.1875em;
 }
 
-
 .icon {
   width: 40px;
   height: 40px;
-  margin: 0 10px;
+  margin: 10px;
   background-size: cover;
   filter: brightness(50%);
   transition: 1s 10ms
 }
-
 
 .icon:hover {
   filter: brightness(100%);
@@ -73,18 +68,16 @@
   color: #25D366;
 }
 
-
 .select_app {
   background-color: wheat;
-  width: 834px;
+  width: 90%;
+  max-width: 834px;
   min-height: 60px;
   height: auto;
-  /* align-items: center; */
   margin: 20px auto 10px auto;
   border-radius: 5px;
   padding: 10px;
   display: flex;
-  /* align-self: center; */
   justify-content: center;
   text-align: center;
 }
@@ -98,9 +91,9 @@
   padding-bottom: 20px;
   min-height: 350px;
   height: auto;
-  width: 900px;
+  width: 90%;
+  max-width: 900px;
   margin: auto;
-  /* margin-top: 45px; */
   text-align: center;
   background-color: wheat;
   border-radius: 10px;
@@ -109,6 +102,10 @@
 #app_title {
   text-align: center;
   margin-bottom: 10px;
+}
+
+#app_name {
+  font-size: 1em;
 }
 
 .input,
@@ -127,8 +124,9 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: #e2e2e2;
   outline-offset: 3px;
-  font-size: larger;
-  width: 75%;
+  font-size: small;
+  width: 90%;
+  max-width: 75%;
   padding: 10px 1rem;
   transition: 0.25s;
   margin-bottom: 25px;
@@ -149,12 +147,20 @@
   background-color: #fff
 }
 
+#input_warning,
+#input_warningFB,
+#input_warningEM,
+#input_warningWA,
+#input_warningLK {
+  font-size: 1em;
+
+}
+
 
 .btn2 {
   width: 20.5em;
   height: 2.3em;
   margin: 0.5em;
-  margin-top: 15px;
   background: black;
   color: white;
   border: none;
@@ -190,8 +196,6 @@
   transition: all 0.5s;
 }
 
-
-/* header/copyright link */
 .link {
   text-decoration: none;
   color: #55acee;
@@ -208,8 +212,6 @@
   border-bottom: 2px dotted #2ecc71;
 }
 
-
-/* start da css for da buttons */
 .btn {
   border-radius: 5px;
   padding: 15px 25px;
@@ -226,8 +228,6 @@
   -webkit-transform: translate(0px, 5px);
   box-shadow: 0px 1px 0px 0px;
 }
-
-
 
 .blue {
   background-color: #55acee;
@@ -265,7 +265,6 @@
   background-color: #B573D0;
 }
 
-
 .text {
   width: 65%;
   height: 100%;
@@ -294,9 +293,6 @@
   background-color: rgb(0, 105, 105);
 }
 
-
-
-/* Add this CSS to handle the disabled state of buttons */
 .disabled-buttons a,
 .disabled-buttonsFB a,
 .disabled-buttonsLK a,
@@ -312,5 +308,63 @@
 #qr-codeWA,
 #qr-codeEM,
 #qr-codeLK {
-  margin-left: 39%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .fa-2xl {
+    font-size: 40px;
+  }
+
+  .btn2 {
+    width: 15em;
+    height: 2em;
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+
+  .input,
+  .inputFB,
+  .inputLK,
+  .inputEM,
+  .inputEM_subj,
+  .inputEM_cc,
+  .inputEM_bcc,
+  .inputEM_body,
+  .inputWA,
+  .inputWA_text {
+    width: 95%;
+  }
+
+  .ig_content,
+  .fb_content,
+  .email_content,
+  .wa_content,
+  .lk_content {
+    width: 95%;
+  }
+
+  .apptray {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .fa-2xl {
+    font-size: 30px;
+  }
+
+  .btn2 {
+    width: 12em;
+    height: 1.8em;
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
 }
