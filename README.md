@@ -1,17 +1,13 @@
 # Linkers Project
 
+## Introduction
+Linkers is a web application designed to generate links for various social media platforms, email, and WhatsApp. Users can easily create, test, copy, and generate QR codes for links across multiple platforms including Instagram, Facebook, LinkedIn, Email, and WhatsApp.
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Setup Instructions](#setup-instructions)
-- [Usage Instructions](#usage-instructions)
-- [License](#license)
-- [Contributing](#contributing)
 - [Contact](#contact)
-
-## Introduction
-Linkers is a web application designed to generate links for various social media platforms, email, and WhatsApp. Users can easily create, test, copy, and generate QR codes for links across multiple platforms including Instagram, Facebook, LinkedIn, Email, and WhatsApp.
 
 ## Features
 - **Instagram Link Generator**: Generate profile links for Instagram profiles.
@@ -31,7 +27,7 @@ Linkers is a web application designed to generate links for various social media
 - **Font Awesome**: Icons for social media platforms.
 - **QR Code Library**: For generating QR codes.
 
-## Setup Instructions
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/linkers.git
+## Contact
+- **Email**: Krisundre@gmail.com
+- **Github**: @krishundre
+
