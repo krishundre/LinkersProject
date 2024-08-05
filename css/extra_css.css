@@ -63,4 +63,8 @@
     .margin_on_mobile {
         margin: 0px !important;
     }
+
+    .hide_on_mobile {
+        display: none;
+    }
 }
